@@ -1,0 +1,29 @@
+//
+//  Budejie.pch
+//  Budejie
+//
+//  Created by opooc on 2021/4/13.
+//
+/*
+    1.存放公用的宏
+    2.自定义log
+    3.存放公用头文件
+ */
+
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+item.h"
+#define DSYScreenW [UIScreen mainScreen].bounds.size.width
+#define DSYScreenH [UIScreen mainScreen].bounds.size.height
+#define iphone6P 763
+#define iphone6 667
+#define iphone5 568
+#define iphone4 480
+
+
+#define DSYFunc DSYLog(@"%s",__func__) 
+
+#ifdef DEBUG
+#define DSYLog(...) NSLog(__VA_ARGS__)
+#else
+#define DSYLog(...)
+#endif

@@ -13,12 +13,25 @@
 		F0162FD2261F40F6000BC29D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0162FC4261F40F6000BC29D /* main.m */; };
 		F0162FD3261F40F6000BC29D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0162FC5261F40F6000BC29D /* AppDelegate.m */; };
 		F0162FD7261F438C000BC29D /* DSYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0162FD6261F438C000BC29D /* DSYEssenceViewController.m */; };
-		F0162FDC261F4396000BC29D /* DSYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0162FDB261F4396000BC29D /* DSYNewViewController.m */; };
 		F0162FE0261F43A2000BC29D /* DSYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0162FDF261F43A2000BC29D /* DSYPublishViewController.m */; };
 		F0162FE4261F43B0000BC29D /* DSYFriendShipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0162FE3261F43B0000BC29D /* DSYFriendShipViewController.m */; };
 		F0162FE8261F43C2000BC29D /* DSYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0162FE7261F43C2000BC29D /* DSYMeViewController.m */; };
 		F0163008261F4F53000BC29D /* DSYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0163007261F4F53000BC29D /* DSYTabBarController.m */; };
 		F016300E261F547A000BC29D /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = F016300D261F547A000BC29D /* UIImage+image.m */; };
+		F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EA126257525003F79E9 /* UIView+Frame.m */; };
+		F06C2EAE26258465003F79E9 /* DSYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EAD26258465003F79E9 /* DSYNewViewController.m */; };
+		F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EB126258EFA003F79E9 /* UIBarButtonItem+item.m */; };
+		F06C2EB62625B7D0003F79E9 /* DSYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EB52625B7D0003F79E9 /* DSYNavigationViewController.m */; };
+		F06C2EC32625C4F8003F79E9 /* DSYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EC22625C4F8003F79E9 /* DSYSettingViewController.m */; };
+		F06C2ECD26260281003F79E9 /* DSYAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2ECC26260281003F79E9 /* DSYAdViewController.m */; };
+		F06C2ED126260877003F79E9 /* DSYAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C2ED026260877003F79E9 /* DSYAdViewController.xib */; };
+		F06C2EDC26260DC9003F79E9 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2ED526260DC9003F79E9 /* LaunchImage@2x.png */; };
+		F06C2EDD26260DC9003F79E9 /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2ED626260DC9003F79E9 /* LaunchImage-568h@2x.png */; };
+		F06C2EDE26260DC9003F79E9 /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2ED726260DC9003F79E9 /* LaunchImage-800-667h@2x.png */; };
+		F06C2EDF26260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2ED826260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png */; };
+		F06C2EE026260DC9003F79E9 /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2ED926260DC9003F79E9 /* LaunchImage-700@2x.png */; };
+		F06C2EE126260DC9003F79E9 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2EDA26260DC9003F79E9 /* LaunchImage-700-568h@2x.png */; };
+		F06C2EE226260DC9003F79E9 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2EDB26260DC9003F79E9 /* LaunchImage.png */; };
 		F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F06CB726262215CB00749A13 /* DSYTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +46,6 @@
 		F0162FC5261F40F6000BC29D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F0162FD5261F438C000BC29D /* DSYEssenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYEssenceViewController.h; sourceTree = "<group>"; };
 		F0162FD6261F438C000BC29D /* DSYEssenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYEssenceViewController.m; sourceTree = "<group>"; };
-		F0162FDA261F4396000BC29D /* DSYNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYNewViewController.h; sourceTree = "<group>"; };
-		F0162FDB261F4396000BC29D /* DSYNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYNewViewController.m; sourceTree = "<group>"; };
 		F0162FDE261F43A2000BC29D /* DSYPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYPublishViewController.h; sourceTree = "<group>"; };
 		F0162FDF261F43A2000BC29D /* DSYPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYPublishViewController.m; sourceTree = "<group>"; };
 		F0162FE2261F43B0000BC29D /* DSYFriendShipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYFriendShipViewController.h; sourceTree = "<group>"; };
@@ -45,6 +56,27 @@
 		F0163007261F4F53000BC29D /* DSYTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYTabBarController.m; sourceTree = "<group>"; };
 		F016300C261F547A000BC29D /* UIImage+image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
 		F016300D261F547A000BC29D /* UIImage+image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
+		F06C2EA026257525003F79E9 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		F06C2EA126257525003F79E9 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		F06C2EA42625787B003F79E9 /* Budejie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Budejie.pch; sourceTree = "<group>"; };
+		F06C2EAC26258465003F79E9 /* DSYNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYNewViewController.h; sourceTree = "<group>"; };
+		F06C2EAD26258465003F79E9 /* DSYNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYNewViewController.m; sourceTree = "<group>"; };
+		F06C2EB026258EFA003F79E9 /* UIBarButtonItem+item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+item.h"; sourceTree = "<group>"; };
+		F06C2EB126258EFA003F79E9 /* UIBarButtonItem+item.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+item.m"; sourceTree = "<group>"; };
+		F06C2EB42625B7D0003F79E9 /* DSYNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYNavigationViewController.h; sourceTree = "<group>"; };
+		F06C2EB52625B7D0003F79E9 /* DSYNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYNavigationViewController.m; sourceTree = "<group>"; };
+		F06C2EC12625C4F8003F79E9 /* DSYSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYSettingViewController.h; sourceTree = "<group>"; };
+		F06C2EC22625C4F8003F79E9 /* DSYSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYSettingViewController.m; sourceTree = "<group>"; };
+		F06C2ECB26260281003F79E9 /* DSYAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYAdViewController.h; sourceTree = "<group>"; };
+		F06C2ECC26260281003F79E9 /* DSYAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYAdViewController.m; sourceTree = "<group>"; };
+		F06C2ED026260877003F79E9 /* DSYAdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYAdViewController.xib; sourceTree = "<group>"; };
+		F06C2ED526260DC9003F79E9 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		F06C2ED626260DC9003F79E9 /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		F06C2ED726260DC9003F79E9 /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
+		F06C2ED826260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		F06C2ED926260DC9003F79E9 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		F06C2EDA26260DC9003F79E9 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		F06C2EDB26260DC9003F79E9 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		F06CB725262215CB00749A13 /* DSYTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYTabBar.h; sourceTree = "<group>"; };
 		F06CB726262215CB00749A13 /* DSYTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +113,7 @@
 			children = (
 				F0162FB9261F40F6000BC29D /* classes */,
 				F0162FA4261F3676000BC29D /* Main.storyboard */,
+				F06C2ED426260DC9003F79E9 /* AdImage */,
 				F0162FA7261F3677000BC29D /* Assets.xcassets */,
 				F0162FA9261F3677000BC29D /* LaunchScreen.storyboard */,
 				F0162FAC261F3677000BC29D /* Info.plist */,
@@ -105,6 +138,7 @@
 		F0162FBA261F40F6000BC29D /* Me(我的) */ = {
 			isa = PBXGroup;
 			children = (
+				F06C2EBC2625C4E5003F79E9 /* Classes */,
 				F0162FBB261F40F6000BC29D /* Controller */,
 				F0162FBC261F40F6000BC29D /* Model */,
 				F0162FBD261F40F6000BC29D /* View */,
@@ -175,6 +209,7 @@
 				F0162FC3261F40F6000BC29D /* AppDelegate.h */,
 				F0162FC5261F40F6000BC29D /* AppDelegate.m */,
 				F0162FC4261F40F6000BC29D /* main.m */,
+				F06C2EA42625787B003F79E9 /* Budejie.pch */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -192,8 +227,8 @@
 		F0162FC7261F40F6000BC29D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F0162FDA261F4396000BC29D /* DSYNewViewController.h */,
-				F0162FDB261F4396000BC29D /* DSYNewViewController.m */,
+				F06C2EAC26258465003F79E9 /* DSYNewViewController.h */,
+				F06C2EAD26258465003F79E9 /* DSYNewViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +316,7 @@
 		F0162FFD261F4ED8000BC29D /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				F06C2EC626260264003F79E9 /* Classes */,
 				F0162FFE261F4ED8000BC29D /* Controller */,
 				F0163001261F4ED8000BC29D /* Model */,
 				F0163002261F4ED8000BC29D /* View */,
@@ -293,6 +329,8 @@
 			children = (
 				F0163006261F4F53000BC29D /* DSYTabBarController.h */,
 				F0163007261F4F53000BC29D /* DSYTabBarController.m */,
+				F06C2EB42625B7D0003F79E9 /* DSYNavigationViewController.h */,
+				F06C2EB52625B7D0003F79E9 /* DSYNavigationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -318,8 +356,109 @@
 			children = (
 				F016300C261F547A000BC29D /* UIImage+image.h */,
 				F016300D261F547A000BC29D /* UIImage+image.m */,
+				F06C2EA026257525003F79E9 /* UIView+Frame.h */,
+				F06C2EA126257525003F79E9 /* UIView+Frame.m */,
+				F06C2EB026258EFA003F79E9 /* UIBarButtonItem+item.h */,
+				F06C2EB126258EFA003F79E9 /* UIBarButtonItem+item.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		F06C2EBC2625C4E5003F79E9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F06C2EBD2625C4E5003F79E9 /* Setting(设置) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F06C2EBD2625C4E5003F79E9 /* Setting(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				F06C2EBE2625C4E5003F79E9 /* Controller */,
+				F06C2EBF2625C4E5003F79E9 /* Model */,
+				F06C2EC02625C4E5003F79E9 /* View */,
+			);
+			path = "Setting(设置)";
+			sourceTree = "<group>";
+		};
+		F06C2EBE2625C4E5003F79E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F06C2EC12625C4F8003F79E9 /* DSYSettingViewController.h */,
+				F06C2EC22625C4F8003F79E9 /* DSYSettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F06C2EBF2625C4E5003F79E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F06C2EC02625C4E5003F79E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F06C2EC626260264003F79E9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F06C2EC726260264003F79E9 /* AD(广告) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F06C2EC726260264003F79E9 /* AD(广告) */ = {
+			isa = PBXGroup;
+			children = (
+				F06C2EC826260264003F79E9 /* Controller */,
+				F06C2EC926260264003F79E9 /* Model */,
+				F06C2ECA26260264003F79E9 /* View */,
+			);
+			path = "AD(广告)";
+			sourceTree = "<group>";
+		};
+		F06C2EC826260264003F79E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F06C2ECB26260281003F79E9 /* DSYAdViewController.h */,
+				F06C2ECC26260281003F79E9 /* DSYAdViewController.m */,
+				F06C2ED026260877003F79E9 /* DSYAdViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F06C2EC926260264003F79E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F06C2ECA26260264003F79E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F06C2ED426260DC9003F79E9 /* AdImage */ = {
+			isa = PBXGroup;
+			children = (
+				F06C2ED526260DC9003F79E9 /* LaunchImage@2x.png */,
+				F06C2ED626260DC9003F79E9 /* LaunchImage-568h@2x.png */,
+				F06C2ED726260DC9003F79E9 /* LaunchImage-800-667h@2x.png */,
+				F06C2ED826260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png */,
+				F06C2ED926260DC9003F79E9 /* LaunchImage-700@2x.png */,
+				F06C2EDA26260DC9003F79E9 /* LaunchImage-700-568h@2x.png */,
+				F06C2EDB26260DC9003F79E9 /* LaunchImage.png */,
+			);
+			path = AdImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,9 +519,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06C2ED126260877003F79E9 /* DSYAdViewController.xib in Resources */,
 				F0162FAB261F3677000BC29D /* LaunchScreen.storyboard in Resources */,
 				F0162FA8261F3677000BC29D /* Assets.xcassets in Resources */,
 				F0162FA6261F3676000BC29D /* Main.storyboard in Resources */,
+				F06C2EDF26260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				F06C2EDD26260DC9003F79E9 /* LaunchImage-568h@2x.png in Resources */,
+				F06C2EE126260DC9003F79E9 /* LaunchImage-700-568h@2x.png in Resources */,
+				F06C2EE026260DC9003F79E9 /* LaunchImage-700@2x.png in Resources */,
+				F06C2EDE26260DC9003F79E9 /* LaunchImage-800-667h@2x.png in Resources */,
+				F06C2EDC26260DC9003F79E9 /* LaunchImage@2x.png in Resources */,
+				F06C2EE226260DC9003F79E9 /* LaunchImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,16 +540,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06C2EB62625B7D0003F79E9 /* DSYNavigationViewController.m in Sources */,
 				F0162FD2261F40F6000BC29D /* main.m in Sources */,
+				F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */,
 				F0162FE4261F43B0000BC29D /* DSYFriendShipViewController.m in Sources */,
+				F06C2ECD26260281003F79E9 /* DSYAdViewController.m in Sources */,
 				F0162FE8261F43C2000BC29D /* DSYMeViewController.m in Sources */,
 				F0162FD7261F438C000BC29D /* DSYEssenceViewController.m in Sources */,
-				F0162FDC261F4396000BC29D /* DSYNewViewController.m in Sources */,
+				F06C2EC32625C4F8003F79E9 /* DSYSettingViewController.m in Sources */,
 				F0163008261F4F53000BC29D /* DSYTabBarController.m in Sources */,
 				F0162FE0261F43A2000BC29D /* DSYPublishViewController.m in Sources */,
 				F0162FD3261F40F6000BC29D /* AppDelegate.m in Sources */,
 				F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */,
 				F016300E261F547A000BC29D /* UIImage+image.m in Sources */,
+				F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */,
+				F06C2EAE26258465003F79E9 /* DSYNewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +699,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 865P5B9Q5K;
+				GCC_PREFIX_HEADER = Budejie/classes/other/Budejie.pch;
 				INFOPLIST_FILE = Budejie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -566,6 +719,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 865P5B9Q5K;
+				GCC_PREFIX_HEADER = Budejie/classes/other/Budejie.pch;
 				INFOPLIST_FILE = Budejie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

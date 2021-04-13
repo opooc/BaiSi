@@ -13,12 +13,16 @@
 #import "DSYMeViewController.h"
 #import "UIImage+image.h"
 #import "DSYTabBar.h"
+#import "DSYNavigationViewController.h"
 @interface DSYTabBarController ()
+
+
 
 @end
 
 @implementation DSYTabBarController
 +(void)load{
+    //这些东西必须在显示之前设置
     UITabBarItem* item =  [UITabBarItem appearanceWhenContainedIn:self,nil];
     NSMutableDictionary* dicC = [NSMutableDictionary dictionary];
     dicC[NSForegroundColorAttributeName] = [UIColor blackColor ];
@@ -43,28 +47,28 @@
 }
 -(void)setupAllChildViewController{
     DSYEssenceViewController* essenceVc = [[DSYEssenceViewController alloc]init];
-    UINavigationController* nav1        = [[UINavigationController alloc]initWithRootViewController:essenceVc];
+    DSYNavigationViewController* nav1        = [[DSYNavigationViewController alloc]initWithRootViewController:essenceVc];
     [self addChildViewController:nav1];
     
     DSYNewViewController* newVc  = [[DSYNewViewController alloc]init];
-    UINavigationController* nav2 = [[UINavigationController alloc]initWithRootViewController:newVc];
+    DSYNavigationViewController* nav2 = [[DSYNavigationViewController alloc]initWithRootViewController:newVc];
     [self addChildViewController:nav2];
     
     DSYFriendShipViewController* friendshipVc = [[DSYFriendShipViewController alloc]init];
-    UINavigationController* nav3              = [[UINavigationController alloc]initWithRootViewController:friendshipVc];
+    DSYNavigationViewController* nav3              = [[DSYNavigationViewController alloc]initWithRootViewController:friendshipVc];
     [self addChildViewController:nav3];
     
     DSYMeViewController* meVc    = [[DSYMeViewController alloc]init];
-    UINavigationController* nav4 = [[UINavigationController alloc]initWithRootViewController:meVc];
+    DSYNavigationViewController* nav4 = [[DSYNavigationViewController alloc]initWithRootViewController:meVc];
     [self addChildViewController:nav4];
 }
 -(void)setupAllTitleButton{
-    UINavigationController* nav1  = self.childViewControllers[0];
+    DSYNavigationViewController* nav1  = self.childViewControllers[0];
     nav1.tabBarItem.title         = @"精华";
     nav1.tabBarItem.image         = [UIImage imageNamed:@"tabBar_essence_icon"];
     nav1.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_essence_click_icon"];
     
-    UINavigationController* nav2  = self.childViewControllers[1];
+    DSYNavigationViewController* nav2  = self.childViewControllers[1];
     nav2.tabBarItem.title         = @"新帖";
     nav2.tabBarItem.image         = [UIImage imageNamed:@"tabBar_new_icon"];  
     nav2.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_new_click_icon"];
@@ -73,12 +77,12 @@
 //    publishVc.tabBarItem.image          = [UIImage imageOriginalWithName:@"tabBar_publish_icon"];
 //    publishVc.tabBarItem.selectedImage  = [UIImage imageOriginalWithName:@"tabBar_publish_click_icon"];
     
-    UINavigationController* nav3  = self.childViewControllers[2];
+    DSYNavigationViewController* nav3  = self.childViewControllers[2];
     nav3.tabBarItem.title         = @"关注";
     nav3.tabBarItem.image         = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
     nav3.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_friendTrends_click_icon"];
     
-    UINavigationController* nav4  = self.childViewControllers[3];
+    DSYNavigationViewController* nav4  = self.childViewControllers[3];
     nav4.tabBarItem.title         = @"我的";
     nav4.tabBarItem.image         = [UIImage imageNamed:@"tabBar_me_icon"];
     nav4.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_me_click_icon"];

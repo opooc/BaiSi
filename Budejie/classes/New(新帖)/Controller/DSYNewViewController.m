@@ -2,7 +2,7 @@
 //  DSYNewViewController.m
 //  Budejie
 //
-//  Created by opooc on 2021/4/8.
+//  Created by opooc on 2021/4/13.
 //
 
 #import "DSYNewViewController.h"
@@ -15,9 +15,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.view.backgroundColor = [UIColor brownColor];
+    [self setupNavBar];
 }
+-(void)setupNavBar{
 
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"MainTagSubIcon" highImageName:@"MainTagSubIconClick" addTarget:self action:@selector(tagClick)];
+
+    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
+}
+-(void)tagClick{
+    
+}
 /*
 #pragma mark - Navigation
 

@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "DSYTabBarController.h"
+#import "DSYAdViewController.h"
 
 
 @interface AppDelegate ()
@@ -20,8 +20,8 @@
     //1.创建窗口
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     //2.设置控制器
-    DSYTabBarController* tabBarVc = [[DSYTabBarController alloc]init];
-    self.window.rootViewController = tabBarVc;
+    DSYAdViewController* adVc = [[DSYAdViewController alloc]init];
+    self.window.rootViewController = adVc;
     
     //3.显示窗口  
     [self.window makeKeyAndVisible];

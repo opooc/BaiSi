@@ -6,7 +6,7 @@
 //
 
 #import "DSYMeViewController.h"
-
+#import "DSYSettingViewController.h"
 @interface DSYMeViewController ()
 
 @end
@@ -15,12 +15,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNavBar];
+}
+-(void)setupNavBar{
+    UIBarButtonItem* settingItem = [UIBarButtonItem itemWithImageName:@"mine-setting-icon" highImageName:@"mine-setting-icon-click" addTarget:self action:@selector(setting)];
+    //为了做选中状态,这里最好单独抽一个方法来处理
+    UIBarButtonItem* nightItem = [UIBarButtonItem itemWithImageName:@"mine-moon-icon" selImageName:@"mine-moon-icon-click" addTarget:self action:@selector(night:)];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.navigationItem.rightBarButtonItems = @[settingItem,nightItem];
+    self.navigationItem.title = @"我的";
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+}
+
+-(void)night:(UIButton *)button{
+    //按钮一点击，把按钮自身传进来了
+    button.selected = !button.selected;
+}
+-(void)setting{
+    DSYSettingViewController* settingVc = [[DSYSettingViewController alloc]init];
+    //隐藏底部tabbar ,必须在显示之前设置,不能放到settingVc这个控制器里面
+    settingVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:settingVc animated:YES];
 }
 
 #pragma mark - Table view data source

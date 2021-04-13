@@ -15,9 +15,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupNavBar];
 }
-
+-(void)setupNavBar{
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"friendsRecommentIcon" highImageName:@"friendsRecommentIcon-click" addTarget:self action:@selector(friendsRecomment)];
+    self.navigationItem.title = @"我的关注";
+}
+-(void)friendsRecomment{
+    
+}
 /*
 #pragma mark - Navigation
 
