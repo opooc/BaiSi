@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09F0BB6F3D7D92CED9F88A30 /* Pods_Budejie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ACDC61ACDB1FC68B16562A5 /* Pods_Budejie.framework */; };
 		F0162FA6261F3676000BC29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0162FA4261F3676000BC29D /* Main.storyboard */; };
 		F0162FA8261F3677000BC29D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0162FA7261F3677000BC29D /* Assets.xcassets */; };
 		F0162FAB261F3677000BC29D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0162FA9261F3677000BC29D /* LaunchScreen.storyboard */; };
@@ -32,10 +33,15 @@
 		F06C2EE026260DC9003F79E9 /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2ED926260DC9003F79E9 /* LaunchImage-700@2x.png */; };
 		F06C2EE126260DC9003F79E9 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2EDA26260DC9003F79E9 /* LaunchImage-700-568h@2x.png */; };
 		F06C2EE226260DC9003F79E9 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F06C2EDB26260DC9003F79E9 /* LaunchImage.png */; };
+		F06C2EF92626BAFD003F79E9 /* AppDelegate+RootWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EF82626BAFD003F79E9 /* AppDelegate+RootWindow.m */; };
+		F06C2EFD2626BB20003F79E9 /* AppDelegate+SDK.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EFC2626BB20003F79E9 /* AppDelegate+SDK.m */; };
+		F06C2F012626D030003F79E9 /* DSYAdItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F002626D030003F79E9 /* DSYAdItem.m */; };
 		F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F06CB726262215CB00749A13 /* DSYTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1ED7FF59B4F075A289E66B1F /* Pods-Budejie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.release.xcconfig"; path = "Target Support Files/Pods-Budejie/Pods-Budejie.release.xcconfig"; sourceTree = "<group>"; };
+		6ACDC61ACDB1FC68B16562A5 /* Pods_Budejie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Budejie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0162F98261F3676000BC29D /* Budejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0162FA5261F3676000BC29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0162FA7261F3677000BC29D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,8 +83,15 @@
 		F06C2ED926260DC9003F79E9 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
 		F06C2EDA26260DC9003F79E9 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
 		F06C2EDB26260DC9003F79E9 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		F06C2EF72626BAFD003F79E9 /* AppDelegate+RootWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RootWindow.h"; sourceTree = "<group>"; };
+		F06C2EF82626BAFD003F79E9 /* AppDelegate+RootWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RootWindow.m"; sourceTree = "<group>"; };
+		F06C2EFB2626BB20003F79E9 /* AppDelegate+SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SDK.h"; sourceTree = "<group>"; };
+		F06C2EFC2626BB20003F79E9 /* AppDelegate+SDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SDK.m"; sourceTree = "<group>"; };
+		F06C2EFF2626D030003F79E9 /* DSYAdItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYAdItem.h; sourceTree = "<group>"; };
+		F06C2F002626D030003F79E9 /* DSYAdItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYAdItem.m; sourceTree = "<group>"; };
 		F06CB725262215CB00749A13 /* DSYTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYTabBar.h; sourceTree = "<group>"; };
 		F06CB726262215CB00749A13 /* DSYTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYTabBar.m; sourceTree = "<group>"; };
+		F07977B1608AAD07B56FAA23 /* Pods-Budejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.debug.xcconfig"; path = "Target Support Files/Pods-Budejie/Pods-Budejie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,17 +99,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F0BB6F3D7D92CED9F88A30 /* Pods_Budejie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		596893F6FE86D29F5350F814 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6ACDC61ACDB1FC68B16562A5 /* Pods_Budejie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFFC310C0C7E59E43B138044 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F07977B1608AAD07B56FAA23 /* Pods-Budejie.debug.xcconfig */,
+				1ED7FF59B4F075A289E66B1F /* Pods-Budejie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F0162F8F261F3676000BC29D = {
 			isa = PBXGroup;
 			children = (
 				F0162F9A261F3676000BC29D /* Budejie */,
 				F0162F99261F3676000BC29D /* Products */,
+				EFFC310C0C7E59E43B138044 /* Pods */,
+				596893F6FE86D29F5350F814 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -360,6 +393,10 @@
 				F06C2EA126257525003F79E9 /* UIView+Frame.m */,
 				F06C2EB026258EFA003F79E9 /* UIBarButtonItem+item.h */,
 				F06C2EB126258EFA003F79E9 /* UIBarButtonItem+item.m */,
+				F06C2EF72626BAFD003F79E9 /* AppDelegate+RootWindow.h */,
+				F06C2EF82626BAFD003F79E9 /* AppDelegate+RootWindow.m */,
+				F06C2EFB2626BB20003F79E9 /* AppDelegate+SDK.h */,
+				F06C2EFC2626BB20003F79E9 /* AppDelegate+SDK.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -436,6 +473,8 @@
 		F06C2EC926260264003F79E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F06C2EFF2626D030003F79E9 /* DSYAdItem.h */,
+				F06C2F002626D030003F79E9 /* DSYAdItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -468,9 +507,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0162FB1261F3677000BC29D /* Build configuration list for PBXNativeTarget "Budejie" */;
 			buildPhases = (
+				489675438FAC9208BAC8C00C /* [CP] Check Pods Manifest.lock */,
 				F0162F94261F3676000BC29D /* Sources */,
 				F0162F95261F3676000BC29D /* Frameworks */,
 				F0162F96261F3676000BC29D /* Resources */,
+				C581DC2BAD3267D25269D3C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -535,6 +576,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		489675438FAC9208BAC8C00C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Budejie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C581DC2BAD3267D25269D3C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Budejie/Pods-Budejie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Budejie/Pods-Budejie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Budejie/Pods-Budejie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0162F94261F3676000BC29D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -546,7 +629,9 @@
 				F0162FE4261F43B0000BC29D /* DSYFriendShipViewController.m in Sources */,
 				F06C2ECD26260281003F79E9 /* DSYAdViewController.m in Sources */,
 				F0162FE8261F43C2000BC29D /* DSYMeViewController.m in Sources */,
+				F06C2EF92626BAFD003F79E9 /* AppDelegate+RootWindow.m in Sources */,
 				F0162FD7261F438C000BC29D /* DSYEssenceViewController.m in Sources */,
+				F06C2EFD2626BB20003F79E9 /* AppDelegate+SDK.m in Sources */,
 				F06C2EC32625C4F8003F79E9 /* DSYSettingViewController.m in Sources */,
 				F0163008261F4F53000BC29D /* DSYTabBarController.m in Sources */,
 				F0162FE0261F43A2000BC29D /* DSYPublishViewController.m in Sources */,
@@ -554,6 +639,7 @@
 				F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */,
 				F016300E261F547A000BC29D /* UIImage+image.m in Sources */,
 				F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */,
+				F06C2F012626D030003F79E9 /* DSYAdItem.m in Sources */,
 				F06C2EAE26258465003F79E9 /* DSYNewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,7 +717,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -684,7 +770,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -694,6 +780,7 @@
 		};
 		F0162FB2261F3677000BC29D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F07977B1608AAD07B56FAA23 /* Pods-Budejie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -714,6 +801,7 @@
 		};
 		F0162FB3261F3677000BC29D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ED7FF59B4F075A289E66B1F /* Pods-Budejie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

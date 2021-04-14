@@ -20,13 +20,12 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6x-6S-RQa" userLabel="广告展位图">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCg-CU-UQD">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6x-6S-RQa" userLabel="广告展位图">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="696"/>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIr-H3-SGT">
                     <rect key="frame" x="324" y="35" width="70" height="30"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2736247859589041" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,7 +41,7 @@
                 <constraint firstItem="c6x-6S-RQa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1fk-Hf-rH9"/>
                 <constraint firstItem="RCg-CU-UQD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Gnj-7W-Gcw"/>
                 <constraint firstAttribute="trailing" secondItem="pIr-H3-SGT" secondAttribute="trailing" constant="20" id="H1W-ix-bgF"/>
-                <constraint firstAttribute="bottom" secondItem="c6x-6S-RQa" secondAttribute="bottom" id="ISe-q1-fYO"/>
+                <constraint firstAttribute="bottom" secondItem="c6x-6S-RQa" secondAttribute="bottom" constant="200" id="ISe-q1-fYO"/>
                 <constraint firstAttribute="trailing" secondItem="c6x-6S-RQa" secondAttribute="trailing" id="JdM-43-Wle"/>
                 <constraint firstAttribute="bottom" secondItem="RCg-CU-UQD" secondAttribute="bottom" id="YFJ-Hm-TNG"/>
                 <constraint firstItem="RCg-CU-UQD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Zei-Ch-rnT"/>

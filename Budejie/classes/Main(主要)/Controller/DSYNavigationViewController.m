@@ -29,7 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //为了控制手势什么时候触发，只有非根的时候的触发;
-    self.interactivePopGestureRecognizer.delegate = self;
+//    self.interactivePopGestureRecognizer.delegate = self;
+    UIPanGestureRecognizer* pan = [[UIPanGestureRecognizer alloc]initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    [self.view addGestureRecognizer:pan];
+    pan.delegate = self;
+    self.interactivePopGestureRecognizer.enabled = NO;
 
 }
 //一开始就会调用4次，设置导航控制器的时候会调用这个方法initxxRootxxx;
