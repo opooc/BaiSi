@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="LaunchImageView" destination="RCg-CU-UQD" id="JSk-hS-PsE"/>
                 <outlet property="adContainView" destination="c6x-6S-RQa" id="mJA-wp-bCW"/>
+                <outlet property="jumpBtn" destination="pIr-H3-SGT" id="RWY-6I-9bM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="FgR-6Q-clJ"/>
             </connections>
         </placeholder>
@@ -26,14 +27,18 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6x-6S-RQa" userLabel="广告展位图">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="696"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIr-H3-SGT">
-                    <rect key="frame" x="324" y="35" width="70" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIr-H3-SGT">
+                    <rect key="frame" x="324" y="35" width="70" height="29"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2736247859589041" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="3cd-eV-BhA"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="跳过(3秒)"/>
+                    <connections>
+                        <action selector="clickJump:" destination="-1" eventType="touchUpInside" id="dBs-Ww-hDD"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -49,7 +54,7 @@
                 <constraint firstItem="c6x-6S-RQa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lnF-hY-zF0"/>
                 <constraint firstItem="pIr-H3-SGT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="zaF-Gt-Hhd"/>
             </constraints>
-            <point key="canvasLocation" x="378" y="153"/>
+            <point key="canvasLocation" x="52" y="147"/>
         </view>
     </objects>
     <resources>

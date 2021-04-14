@@ -4,17 +4,21 @@
 //
 //  Created by opooc on 2021/4/14.
 //
-
-#import "DSYAdViewController.h"
-#import <AFNetworking/AFNetworking.h>
-#import "DSYAdItem.h"
 #import <MJExtension/MJExtension.h>
 #import <UIImageView+WebCache.h>
+#import <AFNetworking/AFNetworking.h>
+
+#import "DSYAdViewController.h"
+#import "DSYAdItem.h"
+#import "DSYTabBarController.h"
+
+
 @interface DSYAdViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *LaunchImageView;
 @property (weak, nonatomic) IBOutlet UIView *adContainView;
+@property (weak, nonatomic) IBOutlet UIButton *jumpBtn;
 @property (weak, nonatomic) UIImageView *adView;
-
+@property (weak, nonatomic) NSTimer *timer;
 @end
 
 @implementation DSYAdViewController
@@ -37,18 +41,32 @@
     UIApplication* app =[UIApplication sharedApplication];
     if( [app canOpenURL:url]){
         [app openURL:url];
-    }else{
-        DSYLog(@"123123123123123");
     }
-   
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupLaunchImage];
     [self loadAdData];
     //创建定时器
-    [NSTimer scheduledTimerWithTimeInterval:1.f target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.f target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
 }
+-(void)timeChange{
+    static int count  = 3;
+    if(count == 0){
+        //时间结束直接跳转
+        [self clickJump:nil];
+    }
+    count--;
+    //设置跳转按钮的文字
+    [_jumpBtn setTitle:[NSString stringWithFormat:@"跳过(%d秒)",count] forState:UIControlStateNormal];
+}
+//点击跳过按钮
+- (IBAction)clickJump:(UIButton *)sender {
+    DSYTabBarController* tabBarVc = [[DSYTabBarController alloc]init];
+    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
+    [_timer invalidate];
+}
+
 -(void)loadAdData{
     AFHTTPSessionManager* mgr = [AFHTTPSessionManager manager];
     NSMutableArray* para = [NSMutableArray array];
