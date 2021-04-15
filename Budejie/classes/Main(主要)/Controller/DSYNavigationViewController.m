@@ -39,6 +39,7 @@
 //一开始就会调用4次，设置导航控制器的时候会调用这个方法initxxRootxxx;
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if(self.childViewControllers.count > 0){
+        viewController.hidesBottomBarWhenPushed = YES;
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backItemWithImageName:@"navigationButtonReturn" highImageName:@"navigationButtonReturnClick" addTarget:self action:@selector(back) title:@"返回"];
     }
     [super pushViewController:viewController animated:animated];

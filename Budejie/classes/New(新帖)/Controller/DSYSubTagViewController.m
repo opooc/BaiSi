@@ -1,65 +1,80 @@
 //
-//  DSYMeViewController.m
+//  DSYSubTagViewController.m
 //  Budejie
 //
-//  Created by opooc on 2021/4/8.
+//  Created by opooc on 2021/4/14.
 //
+#import <AFNetworking/AFNetworking.h>
+#import <MJExtension/MJExtension.h>
 
-#import "DSYMeViewController.h"
-#import "DSYSettingViewController.h"
-@interface DSYMeViewController ()
+#import "DSYSubTagViewController.h"
+#import "DSYSubTagItem.h"
+#import "DSYSubTagCell.h"
+@interface DSYSubTagViewController ()
+
+@property(nonatomic,strong) NSArray* subTags;
 
 @end
 
-@implementation DSYMeViewController
+@implementation DSYSubTagViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
+    [self loadData];
+    //使用下面的注册方法就不用进行xib绑定了，也不用判断cell是否为空了
+    //self.tableView registerNib: forCellReuseIdentifier:
+    self.title = @"推荐标签";//底层会对self.tableBarItem 和 self.navigationItem赋值;
 }
--(void)setupNavBar{
-    UIBarButtonItem* settingItem = [UIBarButtonItem itemWithImageName:@"mine-setting-icon" highImageName:@"mine-setting-icon-click" addTarget:self action:@selector(setting)];
-    //为了做选中状态,这里最好单独抽一个方法来处理
-    UIBarButtonItem* nightItem = [UIBarButtonItem itemWithImageName:@"mine-moon-icon" selImageName:@"mine-moon-icon-click" addTarget:self action:@selector(night:)];
+-(void)loadData{
+    AFHTTPSessionManager* mgr = [AFHTTPSessionManager manager];
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    [mgr GET:@"http://localhost:8080/baisi/SubTag" parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.subTags = [DSYSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
+        
+        //刷新表格
+        [self.tableView reloadData];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            DSYLog(@"failure");
+        }];
     
-    self.navigationItem.rightBarButtonItems = @[settingItem,nightItem];
-    self.navigationItem.title = @"我的";
-    
-    
-}
-
--(void)night:(UIButton *)button{
-    //按钮一点击，把按钮自身传进来了
-    button.selected = !button.selected;
-}
--(void)setting{
-    DSYSettingViewController* settingVc = [[DSYSettingViewController alloc]init];
-    //隐藏底部tabbar ,必须在显示之前设置,不能放到settingVc这个控制器里面
-    //settingVc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:settingVc animated:YES];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.subTags.count;
 }
 
-/*
+//下面这两个一定得一起设置，才能保证tableView的高度在缓存池中能够适配
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100.f;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100.f;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    static NSString* ID = @"cell";
+    DSYSubTagCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if(cell == nil){
+        //创建系统的cell
+//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        //loadNibName可以直接写名字
+        //使用xib创建一定要记得在xib中绑定cell
+        cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([DSYSubTagCell class]) owner:nil options:nil][0];
+    }
+    DSYLog(@"%p",cell);
+    cell.item = self.subTags[indexPath.row];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

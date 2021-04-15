@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+RootWindow.h"
-#import "AppDelegate+SDK.h"
+//#import "AppDelegate+SDK.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupRootWindow];
-    [self setupAllSDK];
+//    [self setupAllSDK];
     return YES;
 }
   

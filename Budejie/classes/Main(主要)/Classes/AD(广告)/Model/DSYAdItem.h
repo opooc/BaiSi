@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DSYAdItem : NSObject
 
 //广告地址
-@property(nonatomic,strong) NSString *w_picurl;
+@property(nonatomic,strong) NSString *wpi_curl;
 //点击广告的调转页面
 @property(nonatomic,strong) NSString *pri_curl;
 

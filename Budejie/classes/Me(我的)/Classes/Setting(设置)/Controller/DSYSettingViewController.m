@@ -26,8 +26,8 @@
 //    [self.navigationController popViewControllerAnimated:YES];
 //}
 -(void)jump{
-    DSYFunc;
-    [self.navigationController pushViewController: [[UIViewController alloc]init]animated:YES];
+
+
 }
 #pragma mark - Table view data source
 

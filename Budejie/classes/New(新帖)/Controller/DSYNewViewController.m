@@ -6,7 +6,7 @@
 //
 
 #import "DSYNewViewController.h"
-
+#import "DSYSubTagViewController.h"
 @interface DSYNewViewController ()
 
 @end
@@ -25,7 +25,8 @@
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
 }
 -(void)tagClick{
-    
+    DSYSubTagViewController* subTagVc = [[DSYSubTagViewController alloc]init];
+    [self.navigationController pushViewController:subTagVc animated:YES];
 }
 /*
 #pragma mark - Navigation

@@ -36,6 +36,10 @@
 		F06C2EF92626BAFD003F79E9 /* AppDelegate+RootWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EF82626BAFD003F79E9 /* AppDelegate+RootWindow.m */; };
 		F06C2EFD2626BB20003F79E9 /* AppDelegate+SDK.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EFC2626BB20003F79E9 /* AppDelegate+SDK.m */; };
 		F06C2F012626D030003F79E9 /* DSYAdItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F002626D030003F79E9 /* DSYAdItem.m */; };
+		F06C2F052626E2E6003F79E9 /* DSYSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F042626E2E6003F79E9 /* DSYSubTagViewController.m */; };
+		F06C2F092626E9C4003F79E9 /* DSYSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F082626E9C4003F79E9 /* DSYSubTagItem.m */; };
+		F06C2F0E26282BEC003F79E9 /* DSYSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F0C26282BEC003F79E9 /* DSYSubTagCell.m */; };
+		F06C2F0F26282BEC003F79E9 /* DSYSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C2F0D26282BEC003F79E9 /* DSYSubTagCell.xib */; };
 		F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F06CB726262215CB00749A13 /* DSYTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +93,13 @@
 		F06C2EFC2626BB20003F79E9 /* AppDelegate+SDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SDK.m"; sourceTree = "<group>"; };
 		F06C2EFF2626D030003F79E9 /* DSYAdItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYAdItem.h; sourceTree = "<group>"; };
 		F06C2F002626D030003F79E9 /* DSYAdItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYAdItem.m; sourceTree = "<group>"; };
+		F06C2F032626E2E6003F79E9 /* DSYSubTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYSubTagViewController.h; sourceTree = "<group>"; };
+		F06C2F042626E2E6003F79E9 /* DSYSubTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYSubTagViewController.m; sourceTree = "<group>"; };
+		F06C2F072626E9C4003F79E9 /* DSYSubTagItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYSubTagItem.h; sourceTree = "<group>"; };
+		F06C2F082626E9C4003F79E9 /* DSYSubTagItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYSubTagItem.m; sourceTree = "<group>"; };
+		F06C2F0B26282BEC003F79E9 /* DSYSubTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYSubTagCell.h; sourceTree = "<group>"; };
+		F06C2F0C26282BEC003F79E9 /* DSYSubTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYSubTagCell.m; sourceTree = "<group>"; };
+		F06C2F0D26282BEC003F79E9 /* DSYSubTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYSubTagCell.xib; sourceTree = "<group>"; };
 		F06CB725262215CB00749A13 /* DSYTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYTabBar.h; sourceTree = "<group>"; };
 		F06CB726262215CB00749A13 /* DSYTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYTabBar.m; sourceTree = "<group>"; };
 		F07977B1608AAD07B56FAA23 /* Pods-Budejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.debug.xcconfig"; path = "Target Support Files/Pods-Budejie/Pods-Budejie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -262,6 +273,8 @@
 			children = (
 				F06C2EAC26258465003F79E9 /* DSYNewViewController.h */,
 				F06C2EAD26258465003F79E9 /* DSYNewViewController.m */,
+				F06C2F032626E2E6003F79E9 /* DSYSubTagViewController.h */,
+				F06C2F042626E2E6003F79E9 /* DSYSubTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +282,8 @@
 		F0162FC8261F40F6000BC29D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F06C2F072626E9C4003F79E9 /* DSYSubTagItem.h */,
+				F06C2F082626E9C4003F79E9 /* DSYSubTagItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +291,9 @@
 		F0162FC9261F40F6000BC29D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F06C2F0B26282BEC003F79E9 /* DSYSubTagCell.h */,
+				F06C2F0C26282BEC003F79E9 /* DSYSubTagCell.m */,
+				F06C2F0D26282BEC003F79E9 /* DSYSubTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,6 +582,7 @@
 				F0162FAB261F3677000BC29D /* LaunchScreen.storyboard in Resources */,
 				F0162FA8261F3677000BC29D /* Assets.xcassets in Resources */,
 				F0162FA6261F3676000BC29D /* Main.storyboard in Resources */,
+				F06C2F0F26282BEC003F79E9 /* DSYSubTagCell.xib in Resources */,
 				F06C2EDF26260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				F06C2EDD26260DC9003F79E9 /* LaunchImage-568h@2x.png in Resources */,
 				F06C2EE126260DC9003F79E9 /* LaunchImage-700-568h@2x.png in Resources */,
@@ -625,6 +644,8 @@
 			files = (
 				F06C2EB62625B7D0003F79E9 /* DSYNavigationViewController.m in Sources */,
 				F0162FD2261F40F6000BC29D /* main.m in Sources */,
+				F06C2F052626E2E6003F79E9 /* DSYSubTagViewController.m in Sources */,
+				F06C2F092626E9C4003F79E9 /* DSYSubTagItem.m in Sources */,
 				F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */,
 				F0162FE4261F43B0000BC29D /* DSYFriendShipViewController.m in Sources */,
 				F06C2ECD26260281003F79E9 /* DSYAdViewController.m in Sources */,
@@ -636,6 +657,7 @@
 				F0163008261F4F53000BC29D /* DSYTabBarController.m in Sources */,
 				F0162FE0261F43A2000BC29D /* DSYPublishViewController.m in Sources */,
 				F0162FD3261F40F6000BC29D /* AppDelegate.m in Sources */,
+				F06C2F0E26282BEC003F79E9 /* DSYSubTagCell.m in Sources */,
 				F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */,
 				F016300E261F547A000BC29D /* UIImage+image.m in Sources */,
 				F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */,
