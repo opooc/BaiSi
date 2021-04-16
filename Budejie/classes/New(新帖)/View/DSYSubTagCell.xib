@@ -34,12 +34,6 @@
                             <constraint firstAttribute="height" constant="60" id="660-5r-Ghf"/>
                             <constraint firstAttribute="width" constant="60" id="gpg-8e-00W"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="30"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LT-JG-w7a">
                         <rect key="frame" x="280" y="25" width="50" height="50"/>

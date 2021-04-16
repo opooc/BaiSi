@@ -10,7 +10,6 @@
 @interface DSYMeViewController ()
 
 @end
-
 @implementation DSYMeViewController
 
 - (void)viewDidLoad {
@@ -24,8 +23,6 @@
     
     self.navigationItem.rightBarButtonItems = @[settingItem,nightItem];
     self.navigationItem.title = @"我的";
-    
-    
 }
 
 -(void)night:(UIButton *)button{

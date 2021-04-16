@@ -19,12 +19,14 @@ PODS:
   - SDWebImage (5.10.0):
     - SDWebImage/Core (= 5.10.0)
   - SDWebImage/Core (5.10.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 4.0.1)
   - BmobSDK (~> 2.4.1)
   - MJExtension (~> 3.2.4)
   - SDWebImage (~> 5.10.0)
+  - SVProgressHUD (~> 2.2.4)
 
 SPEC REPOS:
   trunk:
@@ -32,13 +34,15 @@ SPEC REPOS:
     - BmobSDK
     - MJExtension
     - SDWebImage
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   BmobSDK: 930525437e6602f7146108e11a9796604a1edbb9
   MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: c582577260b373f59f47de45be0510c38d939a0f
+PODFILE CHECKSUM: 7c42e4d5895d2ba1b9b1c089e30f2ee7c7224924
 
 COCOAPODS: 1.10.1

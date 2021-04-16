@@ -6,7 +6,7 @@
 //
 
 #import "DSYFriendShipViewController.h"
-
+#import "DSYLoginRegisterViewController.h"
 @interface DSYFriendShipViewController ()
 
 @end
@@ -17,12 +17,16 @@
     [super viewDidLoad];
     [self setupNavBar];
 }
+- (IBAction)clickLoginRegister:(id)sender {
+    DSYLoginRegisterViewController* lgVc = [[DSYLoginRegisterViewController alloc]init];
+    [self presentViewController:lgVc animated:YES completion:nil];
+}
 -(void)setupNavBar{
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"friendsRecommentIcon" highImageName:@"friendsRecommentIcon-click" addTarget:self action:@selector(friendsRecomment)];
     self.navigationItem.title = @"我的关注";
 }
 -(void)friendsRecomment{
-    
+   
 }
 /*
 #pragma mark - Navigation

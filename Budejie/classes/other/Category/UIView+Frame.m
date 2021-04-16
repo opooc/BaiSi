@@ -43,4 +43,21 @@
 - (CGFloat)dsy_y{
     return self.frame.origin.y;
 }
+
+- (void)setDsy_centerX:(CGFloat)dsy_centerX{
+    CGPoint center = self.center;
+    center.x = dsy_centerX;
+    self.center = center;
+}
+- (CGFloat)dsy_centerX{
+    return self.center.x;
+}
+- (void)setDsy_centerY:(CGFloat)dsy_centerY{
+    CGPoint center = self.center;
+    center.y = dsy_centerY;
+    self.center = center;
+}
+- (CGFloat)dsy_centerY{
+    return self.center.y;
+}
 @end

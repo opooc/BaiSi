@@ -19,6 +19,11 @@
 		F0162FE8261F43C2000BC29D /* DSYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0162FE7261F43C2000BC29D /* DSYMeViewController.m */; };
 		F0163008261F4F53000BC29D /* DSYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0163007261F4F53000BC29D /* DSYTabBarController.m */; };
 		F016300E261F547A000BC29D /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = F016300D261F547A000BC29D /* UIImage+image.m */; };
+		F030BC2A2628D61C00253E07 /* DSYFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC292628D61C00253E07 /* DSYFastLoginView.m */; };
+		F030BC2D2628D62E00253E07 /* DSYFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030BC2C2628D62E00253E07 /* DSYFastLoginView.xib */; };
+		F030BC312628E28300253E07 /* DSYFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC302628E28300253E07 /* DSYFastButton.m */; };
+		F030BC3526295F6000253E07 /* DSYLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC3426295F6000253E07 /* DSYLoginField.m */; };
+		F030BC3926296A7B00253E07 /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC3826296A7B00253E07 /* UITextField+Placeholder.m */; };
 		F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EA126257525003F79E9 /* UIView+Frame.m */; };
 		F06C2EAE26258465003F79E9 /* DSYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EAD26258465003F79E9 /* DSYNewViewController.m */; };
 		F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EB126258EFA003F79E9 /* UIBarButtonItem+item.m */; };
@@ -40,6 +45,12 @@
 		F06C2F092626E9C4003F79E9 /* DSYSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F082626E9C4003F79E9 /* DSYSubTagItem.m */; };
 		F06C2F0E26282BEC003F79E9 /* DSYSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F0C26282BEC003F79E9 /* DSYSubTagCell.m */; };
 		F06C2F0F26282BEC003F79E9 /* DSYSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C2F0D26282BEC003F79E9 /* DSYSubTagCell.xib */; };
+		F06C2F14262854CF003F79E9 /* UIImage+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F13262854CF003F79E9 /* UIImage+CircleImage.m */; };
+		F06C2F1E262882B8003F79E9 /* DSYFriendShipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C2F1D262882B8003F79E9 /* DSYFriendShipViewController.xib */; };
+		F06C2F28262888BE003F79E9 /* DSYLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F26262888BE003F79E9 /* DSYLoginRegisterViewController.m */; };
+		F06C2F29262888BE003F79E9 /* DSYLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C2F27262888BE003F79E9 /* DSYLoginRegisterViewController.xib */; };
+		F06C2F2D26289C37003F79E9 /* DSYLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F2C26289C37003F79E9 /* DSYLoginRegisterView.m */; };
+		F06C2F3026289C42003F79E9 /* DSYLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C2F2F26289C42003F79E9 /* DSYLoginRegisterView.xib */; };
 		F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F06CB726262215CB00749A13 /* DSYTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +77,15 @@
 		F0163007261F4F53000BC29D /* DSYTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYTabBarController.m; sourceTree = "<group>"; };
 		F016300C261F547A000BC29D /* UIImage+image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
 		F016300D261F547A000BC29D /* UIImage+image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
+		F030BC282628D61C00253E07 /* DSYFastLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYFastLoginView.h; sourceTree = "<group>"; };
+		F030BC292628D61C00253E07 /* DSYFastLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYFastLoginView.m; sourceTree = "<group>"; };
+		F030BC2C2628D62E00253E07 /* DSYFastLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYFastLoginView.xib; sourceTree = "<group>"; };
+		F030BC2F2628E28300253E07 /* DSYFastButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYFastButton.h; sourceTree = "<group>"; };
+		F030BC302628E28300253E07 /* DSYFastButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYFastButton.m; sourceTree = "<group>"; };
+		F030BC3326295F6000253E07 /* DSYLoginField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYLoginField.h; sourceTree = "<group>"; };
+		F030BC3426295F6000253E07 /* DSYLoginField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYLoginField.m; sourceTree = "<group>"; };
+		F030BC3726296A7B00253E07 /* UITextField+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placeholder.h"; sourceTree = "<group>"; };
+		F030BC3826296A7B00253E07 /* UITextField+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placeholder.m"; sourceTree = "<group>"; };
 		F06C2EA026257525003F79E9 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		F06C2EA126257525003F79E9 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		F06C2EA42625787B003F79E9 /* Budejie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Budejie.pch; sourceTree = "<group>"; };
@@ -100,6 +120,15 @@
 		F06C2F0B26282BEC003F79E9 /* DSYSubTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYSubTagCell.h; sourceTree = "<group>"; };
 		F06C2F0C26282BEC003F79E9 /* DSYSubTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYSubTagCell.m; sourceTree = "<group>"; };
 		F06C2F0D26282BEC003F79E9 /* DSYSubTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYSubTagCell.xib; sourceTree = "<group>"; };
+		F06C2F12262854CF003F79E9 /* UIImage+CircleImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CircleImage.h"; sourceTree = "<group>"; };
+		F06C2F13262854CF003F79E9 /* UIImage+CircleImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CircleImage.m"; sourceTree = "<group>"; };
+		F06C2F1D262882B8003F79E9 /* DSYFriendShipViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYFriendShipViewController.xib; sourceTree = "<group>"; };
+		F06C2F25262888BE003F79E9 /* DSYLoginRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYLoginRegisterViewController.h; sourceTree = "<group>"; };
+		F06C2F26262888BE003F79E9 /* DSYLoginRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYLoginRegisterViewController.m; sourceTree = "<group>"; };
+		F06C2F27262888BE003F79E9 /* DSYLoginRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		F06C2F2B26289C37003F79E9 /* DSYLoginRegisterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYLoginRegisterView.h; sourceTree = "<group>"; };
+		F06C2F2C26289C37003F79E9 /* DSYLoginRegisterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYLoginRegisterView.m; sourceTree = "<group>"; };
+		F06C2F2F26289C42003F79E9 /* DSYLoginRegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYLoginRegisterView.xib; sourceTree = "<group>"; };
 		F06CB725262215CB00749A13 /* DSYTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYTabBar.h; sourceTree = "<group>"; };
 		F06CB726262215CB00749A13 /* DSYTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYTabBar.m; sourceTree = "<group>"; };
 		F07977B1608AAD07B56FAA23 /* Pods-Budejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.debug.xcconfig"; path = "Target Support Files/Pods-Budejie/Pods-Budejie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -313,6 +342,10 @@
 			children = (
 				F0162FE2261F43B0000BC29D /* DSYFriendShipViewController.h */,
 				F0162FE3261F43B0000BC29D /* DSYFriendShipViewController.m */,
+				F06C2F1D262882B8003F79E9 /* DSYFriendShipViewController.xib */,
+				F06C2F25262888BE003F79E9 /* DSYLoginRegisterViewController.h */,
+				F06C2F26262888BE003F79E9 /* DSYLoginRegisterViewController.m */,
+				F06C2F27262888BE003F79E9 /* DSYLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -327,6 +360,16 @@
 		F0162FCD261F40F6000BC29D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F06C2F2B26289C37003F79E9 /* DSYLoginRegisterView.h */,
+				F06C2F2C26289C37003F79E9 /* DSYLoginRegisterView.m */,
+				F06C2F2F26289C42003F79E9 /* DSYLoginRegisterView.xib */,
+				F030BC282628D61C00253E07 /* DSYFastLoginView.h */,
+				F030BC292628D61C00253E07 /* DSYFastLoginView.m */,
+				F030BC2C2628D62E00253E07 /* DSYFastLoginView.xib */,
+				F030BC2F2628E28300253E07 /* DSYFastButton.h */,
+				F030BC302628E28300253E07 /* DSYFastButton.m */,
+				F030BC3326295F6000253E07 /* DSYLoginField.h */,
+				F030BC3426295F6000253E07 /* DSYLoginField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,6 +458,10 @@
 				F06C2EF82626BAFD003F79E9 /* AppDelegate+RootWindow.m */,
 				F06C2EFB2626BB20003F79E9 /* AppDelegate+SDK.h */,
 				F06C2EFC2626BB20003F79E9 /* AppDelegate+SDK.m */,
+				F06C2F12262854CF003F79E9 /* UIImage+CircleImage.h */,
+				F06C2F13262854CF003F79E9 /* UIImage+CircleImage.m */,
+				F030BC3726296A7B00253E07 /* UITextField+Placeholder.h */,
+				F030BC3826296A7B00253E07 /* UITextField+Placeholder.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -578,13 +625,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06C2F29262888BE003F79E9 /* DSYLoginRegisterViewController.xib in Resources */,
+				F06C2F3026289C42003F79E9 /* DSYLoginRegisterView.xib in Resources */,
 				F06C2ED126260877003F79E9 /* DSYAdViewController.xib in Resources */,
 				F0162FAB261F3677000BC29D /* LaunchScreen.storyboard in Resources */,
 				F0162FA8261F3677000BC29D /* Assets.xcassets in Resources */,
 				F0162FA6261F3676000BC29D /* Main.storyboard in Resources */,
 				F06C2F0F26282BEC003F79E9 /* DSYSubTagCell.xib in Resources */,
+				F030BC2D2628D62E00253E07 /* DSYFastLoginView.xib in Resources */,
 				F06C2EDF26260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				F06C2EDD26260DC9003F79E9 /* LaunchImage-568h@2x.png in Resources */,
+				F06C2F1E262882B8003F79E9 /* DSYFriendShipViewController.xib in Resources */,
 				F06C2EE126260DC9003F79E9 /* LaunchImage-700-568h@2x.png in Resources */,
 				F06C2EE026260DC9003F79E9 /* LaunchImage-700@2x.png in Resources */,
 				F06C2EDE26260DC9003F79E9 /* LaunchImage-800-667h@2x.png in Resources */,
@@ -647,11 +698,16 @@
 				F06C2F052626E2E6003F79E9 /* DSYSubTagViewController.m in Sources */,
 				F06C2F092626E9C4003F79E9 /* DSYSubTagItem.m in Sources */,
 				F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */,
+				F030BC3926296A7B00253E07 /* UITextField+Placeholder.m in Sources */,
+				F030BC2A2628D61C00253E07 /* DSYFastLoginView.m in Sources */,
+				F06C2F28262888BE003F79E9 /* DSYLoginRegisterViewController.m in Sources */,
 				F0162FE4261F43B0000BC29D /* DSYFriendShipViewController.m in Sources */,
+				F030BC3526295F6000253E07 /* DSYLoginField.m in Sources */,
 				F06C2ECD26260281003F79E9 /* DSYAdViewController.m in Sources */,
 				F0162FE8261F43C2000BC29D /* DSYMeViewController.m in Sources */,
 				F06C2EF92626BAFD003F79E9 /* AppDelegate+RootWindow.m in Sources */,
 				F0162FD7261F438C000BC29D /* DSYEssenceViewController.m in Sources */,
+				F06C2F2D26289C37003F79E9 /* DSYLoginRegisterView.m in Sources */,
 				F06C2EFD2626BB20003F79E9 /* AppDelegate+SDK.m in Sources */,
 				F06C2EC32625C4F8003F79E9 /* DSYSettingViewController.m in Sources */,
 				F0163008261F4F53000BC29D /* DSYTabBarController.m in Sources */,
@@ -661,6 +717,8 @@
 				F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */,
 				F016300E261F547A000BC29D /* UIImage+image.m in Sources */,
 				F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */,
+				F030BC312628E28300253E07 /* DSYFastButton.m in Sources */,
+				F06C2F14262854CF003F79E9 /* UIImage+CircleImage.m in Sources */,
 				F06C2F012626D030003F79E9 /* DSYAdItem.m in Sources */,
 				F06C2EAE26258465003F79E9 /* DSYNewViewController.m in Sources */,
 			);

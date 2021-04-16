@@ -19,6 +19,7 @@
 #define iphone5 568
 #define iphone4 480
 
+#define DSYColor(r,g,b) [UIColor colorWithRed:(r)/256.0 green:(g)/256.0 blue:(b)/256.0 alpha:1]
 
 #define DSYFunc DSYLog(@"%s",__func__) 
 

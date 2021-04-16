@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DSYLoginRegisterViewController">
+            <connections>
+                <outlet property="bottomView" destination="PoN-e4-cf4" id="VhS-7G-b7f"/>
+                <outlet property="leadCons" destination="MJe-N5-gI9" id="rIp-3I-8Oy"/>
+                <outlet property="middleView" destination="KsO-cq-Q6C" id="VuP-Lf-xat"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="YY3-YB-xAb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPT-k7-Ezr" userLabel="Top">
+                    <rect key="frame" x="0.0" y="40" width="414" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqt-2f-CaC">
+                            <rect key="frame" x="10" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="Cfj-uS-Aqe"/>
+                            </constraints>
+                            <state key="normal" image="login_close_icon"/>
+                            <connections>
+                                <action selector="close:" destination="-1" eventType="touchUpInside" id="7AI-R2-3Xb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwp-a4-ZxO">
+                            <rect key="frame" x="324" y="0.0" width="90" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="90" id="e4D-y4-CGS"/>
+                            </constraints>
+                            <state key="normal" title="注册账号"/>
+                            <state key="selected" title="已有账号？"/>
+                            <connections>
+                                <action selector="clickRegister:" destination="-1" eventType="touchUpInside" id="ZhM-xU-6F4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tqt-2f-CaC" firstAttribute="leading" secondItem="uPT-k7-Ezr" secondAttribute="leading" constant="10" id="OB9-Pa-9Sj"/>
+                        <constraint firstAttribute="bottom" secondItem="tqt-2f-CaC" secondAttribute="bottom" id="WO9-Fl-JOt"/>
+                        <constraint firstAttribute="height" constant="35" id="WnE-Fl-PmS"/>
+                        <constraint firstAttribute="bottom" secondItem="Pwp-a4-ZxO" secondAttribute="bottom" id="gJ7-wE-kL3"/>
+                        <constraint firstItem="Pwp-a4-ZxO" firstAttribute="top" secondItem="uPT-k7-Ezr" secondAttribute="top" id="rAh-nG-8Pe"/>
+                        <constraint firstAttribute="trailing" secondItem="Pwp-a4-ZxO" secondAttribute="trailing" id="uR8-cc-dCB"/>
+                        <constraint firstItem="tqt-2f-CaC" firstAttribute="top" secondItem="uPT-k7-Ezr" secondAttribute="top" id="w0N-It-t5S"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsO-cq-Q6C" userLabel="Middle">
+                    <rect key="frame" x="0.0" y="115" width="828" height="300"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="cu6-XX-6mk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoN-e4-cf4" userLabel="End">
+                    <rect key="frame" x="0.0" y="756" width="414" height="120"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="ILJ-26-8ri"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="uPT-k7-Ezr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="1Sd-xi-Awd" userLabel="View.top = top + 30"/>
+                <constraint firstAttribute="trailing" secondItem="uPT-k7-Ezr" secondAttribute="trailing" id="GK0-C7-DEA"/>
+                <constraint firstItem="KsO-cq-Q6C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MJe-N5-gI9"/>
+                <constraint firstAttribute="trailing" secondItem="YY3-YB-xAb" secondAttribute="trailing" id="PHY-7r-U1r"/>
+                <constraint firstItem="YY3-YB-xAb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RTS-De-fc2"/>
+                <constraint firstItem="PoN-e4-cf4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SgY-cW-fEf"/>
+                <constraint firstItem="uPT-k7-Ezr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="V9v-hY-NmY"/>
+                <constraint firstAttribute="trailing" secondItem="PoN-e4-cf4" secondAttribute="trailing" id="XZ3-2o-dgs"/>
+                <constraint firstAttribute="bottom" secondItem="PoN-e4-cf4" secondAttribute="bottom" constant="20" id="Xgi-eH-ybK"/>
+                <constraint firstItem="KsO-cq-Q6C" firstAttribute="width" secondItem="YY3-YB-xAb" secondAttribute="width" multiplier="2" id="gid-Rk-z8h"/>
+                <constraint firstItem="KsO-cq-Q6C" firstAttribute="top" secondItem="uPT-k7-Ezr" secondAttribute="bottom" constant="40" id="gyH-Dj-gPl"/>
+                <constraint firstAttribute="bottom" secondItem="YY3-YB-xAb" secondAttribute="bottom" id="tI3-VZ-v6S"/>
+                <constraint firstItem="YY3-YB-xAb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vDl-bY-3li"/>
+            </constraints>
+            <point key="canvasLocation" x="-1464" y="132"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_close_icon" width="16" height="16"/>
+        <image name="login_register_background" width="320" height="568"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

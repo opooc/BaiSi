@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property CGFloat dsy_y;
 @property CGFloat dsy_width;
 @property CGFloat dsy_height;
+@property CGFloat dsy_centerX;
+@property CGFloat dsy_centerY;
+
 @end
 
 NS_ASSUME_NONNULL_END

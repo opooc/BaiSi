@@ -9,4 +9,5 @@ target 'Budejie' do
   pod 'MJExtension', '~> 3.2.4'
   pod 'SDWebImage', '~> 5.10.0' 
   pod 'BmobSDK', '~> 2.4.1'
+  pod 'SVProgressHUD', '~> 2.2.4'
 end
