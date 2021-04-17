@@ -21,37 +21,41 @@
     [super awakeFromNib];
     //当不知道颜色的时候，使用tintColor
     self.tintColor = [UIColor whiteColor];
-    //监听文本框的编辑，：1.代理，2，通知，3target(常用)
-    //原则：自己不要成为自己的代理
-    //
+    //监听文本框的编辑：1.代理 2，通知，3target(常用)原则：自己不要成为自己的代理
+
     [self addTarget:self action:@selector(textBegin) forControlEvents:UIControlEventEditingDidBegin];
     [self addTarget:self action:@selector(textEnd) forControlEvents:UIControlEventEditingDidEnd];
-    //设置开始时候默认颜色,方式1
-    [self setupPlaceholderColor:[UIColor lightGrayColor]];
-    //站位文字的文字的本质是一个label,这个时候想要拿到这个label可以使用Runtime,2通过断点去查。
-//    设置默认颜色，方式2,这种KVC方法使用时，一定不能
-    UILabel *placeholderLabel = [self valueForKey:@"placeholderLabel"];
-    placeholderLabel.textColor = [UIColor redColor];
-    //方式3，自己封装一下成UITextField分类的形式
-//    [self textEnd];
+    //提前设置一下颜色，避免到时候拿不到
+    //设置placeholdColor的方式1：使用标准提供
+//    NSMutableDictionary* attrs = [NSMutableDictionary dictionary];
+//    attrs[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+//    self.attributedPlaceholder = [[NSAttributedString alloc]initWithString:self.placeholder attributes:attrs];
     
-    //方式4.runtime的方式
-    self.placeholder = @"123123123";
+    //现在的问题是，如何向系统一样可以快速设置xx.placeholdColor;
+    //查看label属性名的方法：runtime /断点
+    //设置placeholdColor的方式2：使用KVC
+    //UILabel* lb = [self valueForKey:@"placeholderLabel"];//这里一定不能加下划线，会直接崩掉
+    //lb.textColor = [UIColor redColor];
+    
+    //设置placeholdColor的方式3：把方式2封装,并设置专门的颜色属性
+    self.placeholderColor = [UIColor redColor];
+    
+    
 }
 
 //文本框开始编辑调用
 - (void)textBegin{
-    // 这个方法是用来做图文混排的
-    // [NSAttributedString attributedStringWithAttachment:]
-//    [self setupPlaceholderColor:[UIColor whiteColor]];
-    //调找个方法
-//    [self usePlacholderColor:[UIColor whiteColor]];
-    
-//    [self setDsy_Placeholder:@"123"];
+    // 这个方法是用来做图文混排的[NSAttributedString attributedStringWithAttachment:]
+//    NSMutableDictionary* attrs = [NSMutableDictionary dictionary];
+//    attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
+//       self.attributedPlaceholder = [[NSAttributedString alloc]initWithString:self.placeholder attributes:attrs];
+    self.placeholderColor = [UIColor whiteColor];
 }
+//文本框结束编辑调用
 -(void)textEnd{
-//    [self setupPlaceholderColor:[UIColor lightGrayColor]];
-//    [self usePlacholderColor:[UIColor lightGrayColor]];
-    
+//    NSMutableDictionary* attrs = [NSMutableDictionary dictionary];
+//    attrs[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+//       self.attributedPlaceholder = [[NSAttributedString alloc]initWithString:self.placeholder attributes:attrs];
+    self.placeholderColor = [UIColor lightGrayColor];
 }
 @end

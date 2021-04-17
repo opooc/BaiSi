@@ -7,7 +7,9 @@
 
 #import "DSYFriendShipViewController.h"
 #import "DSYLoginRegisterViewController.h"
+#import "UITextField+Placeholder.h"
 @interface DSYFriendShipViewController ()
+
 
 @end
 
@@ -16,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavBar];
+
 }
 - (IBAction)clickLoginRegister:(id)sender {
     DSYLoginRegisterViewController* lgVc = [[DSYLoginRegisterViewController alloc]init];
@@ -28,6 +31,14 @@
 -(void)friendsRecomment{
    
 }
+
+
+ /*测试了textFiled的runtime 的修改
+ //    self.testField.placeholderColor = [UIColor redColor];
+     //此时不适用runtime替换方法，就只能通过这个方法设置占位的文字了;
+ //    [self.testField setDsyPlaceholder:@"123"];
+ //    self.testField.placeholder =@"123123";
+ **/
 /*
 #pragma mark - Navigation
 

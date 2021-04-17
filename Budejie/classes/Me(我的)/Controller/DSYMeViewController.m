@@ -15,6 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavBar];
+    
 }
 -(void)setupNavBar{
     UIBarButtonItem* settingItem = [UIBarButtonItem itemWithImageName:@"mine-setting-icon" highImageName:@"mine-setting-icon-click" addTarget:self action:@selector(setting)];

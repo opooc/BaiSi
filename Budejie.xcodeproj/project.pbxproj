@@ -23,7 +23,8 @@
 		F030BC2D2628D62E00253E07 /* DSYFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030BC2C2628D62E00253E07 /* DSYFastLoginView.xib */; };
 		F030BC312628E28300253E07 /* DSYFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC302628E28300253E07 /* DSYFastButton.m */; };
 		F030BC3526295F6000253E07 /* DSYLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC3426295F6000253E07 /* DSYLoginField.m */; };
-		F030BC3926296A7B00253E07 /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC3826296A7B00253E07 /* UITextField+Placeholder.m */; };
+		F030BC3F262A036700253E07 /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC3E262A036700253E07 /* UITextField+Placeholder.m */; };
+		F030BC42262A0EE400253E07 /* DSYMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F030BC41262A0EE400253E07 /* DSYMeViewController.storyboard */; };
 		F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EA126257525003F79E9 /* UIView+Frame.m */; };
 		F06C2EAE26258465003F79E9 /* DSYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EAD26258465003F79E9 /* DSYNewViewController.m */; };
 		F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EB126258EFA003F79E9 /* UIBarButtonItem+item.m */; };
@@ -84,8 +85,9 @@
 		F030BC302628E28300253E07 /* DSYFastButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYFastButton.m; sourceTree = "<group>"; };
 		F030BC3326295F6000253E07 /* DSYLoginField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYLoginField.h; sourceTree = "<group>"; };
 		F030BC3426295F6000253E07 /* DSYLoginField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYLoginField.m; sourceTree = "<group>"; };
-		F030BC3726296A7B00253E07 /* UITextField+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placeholder.h"; sourceTree = "<group>"; };
-		F030BC3826296A7B00253E07 /* UITextField+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placeholder.m"; sourceTree = "<group>"; };
+		F030BC3D262A036700253E07 /* UITextField+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placeholder.h"; sourceTree = "<group>"; };
+		F030BC3E262A036700253E07 /* UITextField+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placeholder.m"; sourceTree = "<group>"; };
+		F030BC41262A0EE400253E07 /* DSYMeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DSYMeViewController.storyboard; sourceTree = "<group>"; };
 		F06C2EA026257525003F79E9 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		F06C2EA126257525003F79E9 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		F06C2EA42625787B003F79E9 /* Budejie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Budejie.pch; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			children = (
 				F0162FE6261F43C2000BC29D /* DSYMeViewController.h */,
 				F0162FE7261F43C2000BC29D /* DSYMeViewController.m */,
+				F030BC41262A0EE400253E07 /* DSYMeViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -460,8 +463,8 @@
 				F06C2EFC2626BB20003F79E9 /* AppDelegate+SDK.m */,
 				F06C2F12262854CF003F79E9 /* UIImage+CircleImage.h */,
 				F06C2F13262854CF003F79E9 /* UIImage+CircleImage.m */,
-				F030BC3726296A7B00253E07 /* UITextField+Placeholder.h */,
-				F030BC3826296A7B00253E07 /* UITextField+Placeholder.m */,
+				F030BC3D262A036700253E07 /* UITextField+Placeholder.h */,
+				F030BC3E262A036700253E07 /* UITextField+Placeholder.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				F06C2EDF26260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				F06C2EDD26260DC9003F79E9 /* LaunchImage-568h@2x.png in Resources */,
 				F06C2F1E262882B8003F79E9 /* DSYFriendShipViewController.xib in Resources */,
+				F030BC42262A0EE400253E07 /* DSYMeViewController.storyboard in Resources */,
 				F06C2EE126260DC9003F79E9 /* LaunchImage-700-568h@2x.png in Resources */,
 				F06C2EE026260DC9003F79E9 /* LaunchImage-700@2x.png in Resources */,
 				F06C2EDE26260DC9003F79E9 /* LaunchImage-800-667h@2x.png in Resources */,
@@ -698,7 +702,7 @@
 				F06C2F052626E2E6003F79E9 /* DSYSubTagViewController.m in Sources */,
 				F06C2F092626E9C4003F79E9 /* DSYSubTagItem.m in Sources */,
 				F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */,
-				F030BC3926296A7B00253E07 /* UITextField+Placeholder.m in Sources */,
+				F030BC3F262A036700253E07 /* UITextField+Placeholder.m in Sources */,
 				F030BC2A2628D61C00253E07 /* DSYFastLoginView.m in Sources */,
 				F06C2F28262888BE003F79E9 /* DSYLoginRegisterViewController.m in Sources */,
 				F0162FE4261F43B0000BC29D /* DSYFriendShipViewController.m in Sources */,

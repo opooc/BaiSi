@@ -60,7 +60,7 @@
                 <constraint firstItem="v8l-wl-hPO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hmG-2i-cyM"/>
                 <constraint firstItem="v8l-wl-hPO" firstAttribute="top" secondItem="GeT-dW-1yq" secondAttribute="bottom" constant="30" id="tIJ-OS-wVF"/>
             </constraints>
-            <point key="canvasLocation" x="61" y="71"/>
+            <point key="canvasLocation" x="214" y="74"/>
         </view>
     </objects>
     <resources>

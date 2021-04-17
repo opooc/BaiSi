@@ -52,7 +52,7 @@
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.f target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
 }
 -(void)timeChange{
-    static int count  = 3;
+    static int count  = 0;
     if(count == 0){
         //时间结束直接跳转
         [self clickJump:nil];
