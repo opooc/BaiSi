@@ -4,19 +4,85 @@
 //
 //  Created by opooc on 2021/4/8.
 //
+#import <AFNetworking/AFNetworking.h>
+#import <MJExtension/MJExtension.h>
 
 #import "DSYMeViewController.h"
 #import "DSYSettingViewController.h"
-@interface DSYMeViewController ()
+#import "DSYSquareCell.h"
+#import "DSYSquareItem.h"
 
+
+static NSString* const ID =@"cell";
+@interface DSYMeViewController () <UICollectionViewDataSource>
+@property(nonatomic,strong) NSArray* squareItems;
+@property(nonatomic,weak) UICollectionView *collectionView;
 @end
+
 @implementation DSYMeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //设置导航
     [self setupNavBar];
+    //设置底部视图
+    [self setupFootView];
+    //展示方块内容
+    [self loadData];
+}
+-(void)loadData{
+    AFHTTPSessionManager* mgr = [AFHTTPSessionManager manager];
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+
+    [mgr GET:@"http://localhost:8080/baisi/mine" parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DSYLog(@"%@",responseObject);
+
+        self.squareItems = [DSYSquareItem mj_objectArrayWithKeyValuesArray:responseObject];
+        [self.collectionView reloadData];
+        
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+        }];
+}
+
+-(void)setupFootView{
+    //初始化要设置流水 ->要注册cell -》自定义cell
+    //宽度自己管不了
+    UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc]init];
+    
+    NSInteger cols = 4;
+    CGFloat margin = 1;
+    CGFloat itemWH = (DSYScreenW - (cols - 1)*margin) / cols;
+    layout.itemSize = CGSizeMake(itemWH, itemWH);
+    //设置行间距，和列间距
+    layout.minimumInteritemSpacing = margin;
+    layout.minimumLineSpacing = margin;
+    
+    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, 0, 300) collectionViewLayout:layout];
+    self.collectionView = collectionView;
+    collectionView.backgroundColor = self.tableView.backgroundColor;
+    self.tableView.tableFooterView = collectionView;
+    collectionView.dataSource = self;
+    
+    [collectionView registerNib:[UINib nibWithNibName:@"DSYSquareCell" bundle:nil] forCellWithReuseIdentifier:ID];
+//    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier: ID];
     
 }
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.squareItems.count;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    DSYSquareCell* cell =  [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    cell.squareItem = self.squareItems[indexPath.item];
+    return cell;
+}
+
+
+
+
+
 -(void)setupNavBar{
     UIBarButtonItem* settingItem = [UIBarButtonItem itemWithImageName:@"mine-setting-icon" highImageName:@"mine-setting-icon-click" addTarget:self action:@selector(setting)];
     //为了做选中状态,这里最好单独抽一个方法来处理
@@ -37,17 +103,6 @@
     [self.navigationController pushViewController:settingVc animated:YES];
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -102,5 +157,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

@@ -33,7 +33,7 @@
 //    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"friendsRecommentIcon"]options: SDWebImageProgressiveLoad completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
 //        self.iconView.image = [image circleImage];
 //    }];//占位图
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"friendsRecommentIcon`"]];
+    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"friendsRecommentIcon"]];
 }
 //处理订阅的数字
 -(void)resolveNum{

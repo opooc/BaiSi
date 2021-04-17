@@ -25,6 +25,9 @@
 		F030BC3526295F6000253E07 /* DSYLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC3426295F6000253E07 /* DSYLoginField.m */; };
 		F030BC3F262A036700253E07 /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC3E262A036700253E07 /* UITextField+Placeholder.m */; };
 		F030BC42262A0EE400253E07 /* DSYMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F030BC41262A0EE400253E07 /* DSYMeViewController.storyboard */; };
+		F030BC47262AB3CE00253E07 /* DSYSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC45262AB3CE00253E07 /* DSYSquareCell.m */; };
+		F030BC48262AB3CE00253E07 /* DSYSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030BC46262AB3CE00253E07 /* DSYSquareCell.xib */; };
+		F030BC4C262ABAA200253E07 /* DSYSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC4B262ABAA200253E07 /* DSYSquareItem.m */; };
 		F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EA126257525003F79E9 /* UIView+Frame.m */; };
 		F06C2EAE26258465003F79E9 /* DSYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EAD26258465003F79E9 /* DSYNewViewController.m */; };
 		F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EB126258EFA003F79E9 /* UIBarButtonItem+item.m */; };
@@ -88,6 +91,11 @@
 		F030BC3D262A036700253E07 /* UITextField+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placeholder.h"; sourceTree = "<group>"; };
 		F030BC3E262A036700253E07 /* UITextField+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placeholder.m"; sourceTree = "<group>"; };
 		F030BC41262A0EE400253E07 /* DSYMeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DSYMeViewController.storyboard; sourceTree = "<group>"; };
+		F030BC44262AB3CE00253E07 /* DSYSquareCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYSquareCell.h; sourceTree = "<group>"; };
+		F030BC45262AB3CE00253E07 /* DSYSquareCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYSquareCell.m; sourceTree = "<group>"; };
+		F030BC46262AB3CE00253E07 /* DSYSquareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYSquareCell.xib; sourceTree = "<group>"; };
+		F030BC4A262ABAA200253E07 /* DSYSquareItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYSquareItem.h; sourceTree = "<group>"; };
+		F030BC4B262ABAA200253E07 /* DSYSquareItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYSquareItem.m; sourceTree = "<group>"; };
 		F06C2EA026257525003F79E9 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		F06C2EA126257525003F79E9 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		F06C2EA42625787B003F79E9 /* Budejie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Budejie.pch; sourceTree = "<group>"; };
@@ -234,6 +242,8 @@
 		F0162FBC261F40F6000BC29D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F030BC4A262ABAA200253E07 /* DSYSquareItem.h */,
+				F030BC4B262ABAA200253E07 /* DSYSquareItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +251,9 @@
 		F0162FBD261F40F6000BC29D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F030BC44262AB3CE00253E07 /* DSYSquareCell.h */,
+				F030BC45262AB3CE00253E07 /* DSYSquareCell.m */,
+				F030BC46262AB3CE00253E07 /* DSYSquareCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -637,6 +650,7 @@
 				F06C2F0F26282BEC003F79E9 /* DSYSubTagCell.xib in Resources */,
 				F030BC2D2628D62E00253E07 /* DSYFastLoginView.xib in Resources */,
 				F06C2EDF26260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				F030BC48262AB3CE00253E07 /* DSYSquareCell.xib in Resources */,
 				F06C2EDD26260DC9003F79E9 /* LaunchImage-568h@2x.png in Resources */,
 				F06C2F1E262882B8003F79E9 /* DSYFriendShipViewController.xib in Resources */,
 				F030BC42262A0EE400253E07 /* DSYMeViewController.storyboard in Resources */,
@@ -718,8 +732,10 @@
 				F0162FE0261F43A2000BC29D /* DSYPublishViewController.m in Sources */,
 				F0162FD3261F40F6000BC29D /* AppDelegate.m in Sources */,
 				F06C2F0E26282BEC003F79E9 /* DSYSubTagCell.m in Sources */,
+				F030BC47262AB3CE00253E07 /* DSYSquareCell.m in Sources */,
 				F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */,
 				F016300E261F547A000BC29D /* UIImage+image.m in Sources */,
+				F030BC4C262ABAA200253E07 /* DSYSquareItem.m in Sources */,
 				F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */,
 				F030BC312628E28300253E07 /* DSYFastButton.m in Sources */,
 				F06C2F14262854CF003F79E9 /* UIImage+CircleImage.m in Sources */,

@@ -14,6 +14,7 @@
 #import "UIImage+image.h"
 #import "DSYTabBar.h"
 #import "DSYNavigationViewController.h"
+#import "DSYMeViewController.h"
 @interface DSYTabBarController ()
 
 
@@ -58,7 +59,10 @@
     DSYNavigationViewController* nav3              = [[DSYNavigationViewController alloc]initWithRootViewController:friendshipVc];
     [self addChildViewController:nav3];
     
-    DSYMeViewController* meVc    = [[DSYMeViewController alloc]init];
+    //使用storyboard加载
+//    DSYMeViewController* meVc    = [[DSYMeViewController alloc]init];
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:NSStringFromClass([DSYMeViewController class]) bundle:nil];
+    DSYMeViewController* meVc    = [storyboard instantiateInitialViewController];
     DSYNavigationViewController* nav4 = [[DSYNavigationViewController alloc]initWithRootViewController:meVc];
     [self addChildViewController:nav4];
 }
