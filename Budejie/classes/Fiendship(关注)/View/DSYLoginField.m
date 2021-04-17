@@ -38,7 +38,7 @@
     //lb.textColor = [UIColor redColor];
     
     //设置placeholdColor的方式3：把方式2封装,并设置专门的颜色属性
-    self.placeholderColor = [UIColor redColor];
+    self.placeholderColor = [UIColor lightGrayColor];
     
     
 }

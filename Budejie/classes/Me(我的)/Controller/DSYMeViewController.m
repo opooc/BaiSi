@@ -13,9 +13,13 @@
 #import "DSYSquareItem.h"
 
 
+static NSInteger cols = 4;
+static CGFloat margin = 1;
+#define itemWH ((DSYScreenW - (cols - 1)*margin) / cols)
+
 static NSString* const ID =@"cell";
 @interface DSYMeViewController () <UICollectionViewDataSource>
-@property(nonatomic,strong) NSArray* squareItems;
+@property(nonatomic,strong) NSMutableArray* squareItems;
 @property(nonatomic,weak) UICollectionView *collectionView;
 @end
 
@@ -35,25 +39,43 @@ static NSString* const ID =@"cell";
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
 
     [mgr GET:@"http://localhost:8080/baisi/mine" parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        DSYLog(@"%@",responseObject);
-
+        //设置cell的数据,并重新加载
         self.squareItems = [DSYSquareItem mj_objectArrayWithKeyValuesArray:responseObject];
+        //判断数据是否满行。不够就补一下,让UI好看一些
+        [self resloveData];
+        //加载数据,刷新表格
         [self.collectionView reloadData];
-        
 
+        //计算collectionView的高度 = rows*itemWH;
+        //万能公式rows = (count -1)/cols +1;
+        NSInteger count = self.squareItems.count;
+        NSInteger rows  = (count -1)/cols +1;
+        //设置 collectionView的高度,让其自适应
+        /*设置self.tableView.contentSize是没有效果的，因为这个的范围是系统自动管理，所以这里只需重新对
+          footerView重新赋值就好了，tableView会重新计算自己的高度，开始是没有数据的时候collectionView的高度，即300
+         */
+        self.collectionView.dsy_height = rows * itemWH;
+        //同时要设置footview的高度
+        self.tableView.tableFooterView = self.collectionView;
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
         }];
 }
-
+#pragma mark -处理请求完成数据
+-(void)resloveData{
+    NSInteger count = self.squareItems.count;
+    NSInteger exter = cols - count%cols;
+    for(int i = 0 ;i<exter ;i++){
+        DSYSquareItem *item = [[DSYSquareItem alloc]init];
+        [self.squareItems addObject:item];
+    }
+}
 -(void)setupFootView{
     //初始化要设置流水 ->要注册cell -》自定义cell
     //宽度自己管不了
     UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc]init];
     
-    NSInteger cols = 4;
-    CGFloat margin = 1;
-    CGFloat itemWH = (DSYScreenW - (cols - 1)*margin) / cols;
     layout.itemSize = CGSizeMake(itemWH, itemWH);
     //设置行间距，和列间距
     layout.minimumInteritemSpacing = margin;
@@ -63,6 +85,8 @@ static NSString* const ID =@"cell";
     self.collectionView = collectionView;
     collectionView.backgroundColor = self.tableView.backgroundColor;
     self.tableView.tableFooterView = collectionView;
+    //设置collectionView不能滚动
+    collectionView.scrollEnabled = NO;
     collectionView.dataSource = self;
     
     [collectionView registerNib:[UINib nibWithNibName:@"DSYSquareCell" bundle:nil] forCellWithReuseIdentifier:ID];
