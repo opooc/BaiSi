@@ -72,7 +72,7 @@
     AFHTTPSessionManager* mgr = [AFHTTPSessionManager manager];
     NSMutableArray* para = [NSMutableArray array];
     [mgr GET:@"http://localhost:8080/baisi/Ad" parameters:para headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        DSYLog(@"success");
+//        DSYLog(@"success");
 //        创建字典
 //        NSDictionary* adDict = [responseObject lastObject];//改了需求,服务器随机广告
         NSDictionary* adDict = responseObject;

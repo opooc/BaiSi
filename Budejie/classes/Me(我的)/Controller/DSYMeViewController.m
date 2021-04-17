@@ -6,6 +6,7 @@
 //
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
+#import <SafariServices/SafariServices.h>
 
 #import "DSYMeViewController.h"
 #import "DSYSettingViewController.h"
@@ -13,12 +14,13 @@
 #import "DSYSquareItem.h"
 
 
+
 static NSInteger cols = 4;
 static CGFloat margin = 1;
 #define itemWH ((DSYScreenW - (cols - 1)*margin) / cols)
 
 static NSString* const ID =@"cell";
-@interface DSYMeViewController () <UICollectionViewDataSource>
+@interface DSYMeViewController () <UICollectionViewDataSource,UICollectionViewDelegate,SFSafariViewControllerDelegate>
 @property(nonatomic,strong) NSMutableArray* squareItems;
 @property(nonatomic,weak) UICollectionView *collectionView;
 @end
@@ -33,7 +35,27 @@ static NSString* const ID =@"cell";
     [self setupFootView];
     //展示方块内容
     [self loadData];
+    //tableView分组样式，有额外的头部和尾部间距
+    [self changeSpacing];
 }
+-(void)changeSpacing{
+    //这样设置后，最顶部是不算的
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.sectionFooterHeight = 10;
+
+    //最顶部的间距处理;整体上偏移 ，默认-25 = cell的35 -10
+    self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
+}
+/*
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSLog(@"%@",NSStringFromCGRect(cell.frame));
+}
+- (void)viewWillAppear:(BOOL)animated{
+    //查看tabview的内边距
+    DSYLog(@"%@",NSStringFromUIEdgeInsets(self.tableView.contentInset));
+}
+*/
 -(void)loadData{
     AFHTTPSessionManager* mgr = [AFHTTPSessionManager manager];
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
@@ -62,7 +84,7 @@ static NSString* const ID =@"cell";
             
         }];
 }
-#pragma mark -处理请求完成数据
+#pragma mark - 处理请求完成数据
 -(void)resloveData{
     NSInteger count = self.squareItems.count;
     NSInteger exter = cols - count%cols;
@@ -87,12 +109,34 @@ static NSString* const ID =@"cell";
     self.tableView.tableFooterView = collectionView;
     //设置collectionView不能滚动
     collectionView.scrollEnabled = NO;
-    collectionView.dataSource = self;
+    collectionView.dataSource    = self;
+    collectionView.delegate      = self;
     
     [collectionView registerNib:[UINib nibWithNibName:@"DSYSquareCell" bundle:nil] forCellWithReuseIdentifier:ID];
 //    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier: ID];
     
 }
+#pragma mark - 处理小格子
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    //跳转网页:1.Safari 2.UIWebView（不能上架了） 3.SFSafariViewController(不怎么用)
+    //4.WKWebView可以1监听进度 2.缓存
+    DSYSquareItem* item =  self.squareItems[indexPath.item];
+    if(![item.url containsString:@"http"])return;
+    //使用方式3
+    SFSafariViewController* safariVc = [[SFSafariViewController alloc]initWithURL:[NSURL URLWithString:item.url]];
+    safariVc.delegate = self;
+    //如果用导航栏 push的方式，就需要隐藏一下顶部导航，隐藏后在 返回的时候，还要记得显示导航栏
+//    self.navigationController.navigationBarHidden = YES;
+//    [self.navigationController pushViewController:safariVc animated:YES];
+    //苹果推荐 Modal，但是底层对自动做push，导航栏也不用自己用;
+    [self presentViewController:safariVc animated:YES completion:nil];
+}
+#pragma mark - SFSafariViewControllerDelegate
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller{
+//    [self.navigationController popViewControllerAnimated: YES];
+}
+
+#pragma mark - 返回小格子的数量
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.squareItems.count;
 }
@@ -102,10 +146,6 @@ static NSString* const ID =@"cell";
     cell.squareItem = self.squareItems[indexPath.item];
     return cell;
 }
-
-
-
-
 
 -(void)setupNavBar{
     UIBarButtonItem* settingItem = [UIBarButtonItem itemWithImageName:@"mine-setting-icon" highImageName:@"mine-setting-icon-click" addTarget:self action:@selector(setting)];
