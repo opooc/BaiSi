@@ -6,13 +6,14 @@
 //
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
-#import <SafariServices/SafariServices.h>
+//#import <SafariServices/SafariServices.h>
+#import <WebKit/WebKit.h>
 
 #import "DSYMeViewController.h"
 #import "DSYSettingViewController.h"
 #import "DSYSquareCell.h"
 #import "DSYSquareItem.h"
-
+#import "DSYWebViewController.h"
 
 
 static NSInteger cols = 4;
@@ -20,7 +21,8 @@ static CGFloat margin = 1;
 #define itemWH ((DSYScreenW - (cols - 1)*margin) / cols)
 
 static NSString* const ID =@"cell";
-@interface DSYMeViewController () <UICollectionViewDataSource,UICollectionViewDelegate,SFSafariViewControllerDelegate>
+//SFSafariViewControllerDelegate
+@interface DSYMeViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic,strong) NSMutableArray* squareItems;
 @property(nonatomic,weak) UICollectionView *collectionView;
 @end
@@ -123,18 +125,24 @@ static NSString* const ID =@"cell";
     DSYSquareItem* item =  self.squareItems[indexPath.item];
     if(![item.url containsString:@"http"])return;
     //使用方式3
-    SFSafariViewController* safariVc = [[SFSafariViewController alloc]initWithURL:[NSURL URLWithString:item.url]];
-    safariVc.delegate = self;
+//    SFSafariViewController* safariVc = [[SFSafariViewController alloc]initWithURL:[NSURL URLWithString:item.url]];
+//    safariVc.delegate = self;
     //如果用导航栏 push的方式，就需要隐藏一下顶部导航，隐藏后在 返回的时候，还要记得显示导航栏
 //    self.navigationController.navigationBarHidden = YES;
 //    [self.navigationController pushViewController:safariVc animated:YES];
     //苹果推荐 Modal，但是底层对自动做push，导航栏也不用自己用;
-    [self presentViewController:safariVc animated:YES completion:nil];
+//    [self presentViewController:safariVc animated:YES completion:nil];
+    
+    //使用方式4
+    DSYWebViewController* webVc = [[DSYWebViewController alloc]init];
+    webVc.urlstring = item.url;
+    [self.navigationController pushViewController:webVc animated:YES];
+                      
 }
 #pragma mark - SFSafariViewControllerDelegate
-- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller{
+//- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller{
 //    [self.navigationController popViewControllerAnimated: YES];
-}
+//}
 
 #pragma mark - 返回小格子的数量
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

@@ -28,6 +28,9 @@
 		F030BC47262AB3CE00253E07 /* DSYSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC45262AB3CE00253E07 /* DSYSquareCell.m */; };
 		F030BC48262AB3CE00253E07 /* DSYSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030BC46262AB3CE00253E07 /* DSYSquareCell.xib */; };
 		F030BC4C262ABAA200253E07 /* DSYSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC4B262ABAA200253E07 /* DSYSquareItem.m */; };
+		F030BC56262B3D0100253E07 /* DSYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC54262B3D0100253E07 /* DSYWebViewController.m */; };
+		F030BC57262B3D0100253E07 /* DSYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030BC55262B3D0100253E07 /* DSYWebViewController.xib */; };
+		F030BC5A262B443A00253E07 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F030BC59262B443A00253E07 /* WebKit.framework */; };
 		F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EA126257525003F79E9 /* UIView+Frame.m */; };
 		F06C2EAE26258465003F79E9 /* DSYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EAD26258465003F79E9 /* DSYNewViewController.m */; };
 		F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EB126258EFA003F79E9 /* UIBarButtonItem+item.m */; };
@@ -96,6 +99,10 @@
 		F030BC46262AB3CE00253E07 /* DSYSquareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYSquareCell.xib; sourceTree = "<group>"; };
 		F030BC4A262ABAA200253E07 /* DSYSquareItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYSquareItem.h; sourceTree = "<group>"; };
 		F030BC4B262ABAA200253E07 /* DSYSquareItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYSquareItem.m; sourceTree = "<group>"; };
+		F030BC53262B3D0100253E07 /* DSYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYWebViewController.h; sourceTree = "<group>"; };
+		F030BC54262B3D0100253E07 /* DSYWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYWebViewController.m; sourceTree = "<group>"; };
+		F030BC55262B3D0100253E07 /* DSYWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYWebViewController.xib; sourceTree = "<group>"; };
+		F030BC59262B443A00253E07 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F06C2EA026257525003F79E9 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		F06C2EA126257525003F79E9 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		F06C2EA42625787B003F79E9 /* Budejie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Budejie.pch; sourceTree = "<group>"; };
@@ -149,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F030BC5A262B443A00253E07 /* WebKit.framework in Frameworks */,
 				09F0BB6F3D7D92CED9F88A30 /* Pods_Budejie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +167,7 @@
 		596893F6FE86D29F5350F814 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F030BC59262B443A00253E07 /* WebKit.framework */,
 				6ACDC61ACDB1FC68B16562A5 /* Pods_Budejie.framework */,
 			);
 			name = Frameworks;
@@ -235,6 +244,9 @@
 				F0162FE6261F43C2000BC29D /* DSYMeViewController.h */,
 				F0162FE7261F43C2000BC29D /* DSYMeViewController.m */,
 				F030BC41262A0EE400253E07 /* DSYMeViewController.storyboard */,
+				F030BC53262B3D0100253E07 /* DSYWebViewController.h */,
+				F030BC54262B3D0100253E07 /* DSYWebViewController.m */,
+				F030BC55262B3D0100253E07 /* DSYWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -650,6 +662,7 @@
 				F06C2F0F26282BEC003F79E9 /* DSYSubTagCell.xib in Resources */,
 				F030BC2D2628D62E00253E07 /* DSYFastLoginView.xib in Resources */,
 				F06C2EDF26260DC9003F79E9 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				F030BC57262B3D0100253E07 /* DSYWebViewController.xib in Resources */,
 				F030BC48262AB3CE00253E07 /* DSYSquareCell.xib in Resources */,
 				F06C2EDD26260DC9003F79E9 /* LaunchImage-568h@2x.png in Resources */,
 				F06C2F1E262882B8003F79E9 /* DSYFriendShipViewController.xib in Resources */,
@@ -718,6 +731,7 @@
 				F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */,
 				F030BC3F262A036700253E07 /* UITextField+Placeholder.m in Sources */,
 				F030BC2A2628D61C00253E07 /* DSYFastLoginView.m in Sources */,
+				F030BC56262B3D0100253E07 /* DSYWebViewController.m in Sources */,
 				F06C2F28262888BE003F79E9 /* DSYLoginRegisterViewController.m in Sources */,
 				F0162FE4261F43B0000BC29D /* DSYFriendShipViewController.m in Sources */,
 				F030BC3526295F6000253E07 /* DSYLoginField.m in Sources */,
