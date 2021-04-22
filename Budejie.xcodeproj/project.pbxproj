@@ -31,6 +31,7 @@
 		F030BC56262B3D0100253E07 /* DSYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC54262B3D0100253E07 /* DSYWebViewController.m */; };
 		F030BC57262B3D0100253E07 /* DSYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F030BC55262B3D0100253E07 /* DSYWebViewController.xib */; };
 		F030BC5A262B443A00253E07 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F030BC59262B443A00253E07 /* WebKit.framework */; };
+		F030BC60262D031600253E07 /* DSYFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F030BC5F262D031600253E07 /* DSYFileTool.m */; };
 		F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EA126257525003F79E9 /* UIView+Frame.m */; };
 		F06C2EAE26258465003F79E9 /* DSYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EAD26258465003F79E9 /* DSYNewViewController.m */; };
 		F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2EB126258EFA003F79E9 /* UIBarButtonItem+item.m */; };
@@ -103,6 +104,8 @@
 		F030BC54262B3D0100253E07 /* DSYWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYWebViewController.m; sourceTree = "<group>"; };
 		F030BC55262B3D0100253E07 /* DSYWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSYWebViewController.xib; sourceTree = "<group>"; };
 		F030BC59262B443A00253E07 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F030BC5E262D031600253E07 /* DSYFileTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYFileTool.h; sourceTree = "<group>"; };
+		F030BC5F262D031600253E07 /* DSYFileTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYFileTool.m; sourceTree = "<group>"; };
 		F06C2EA026257525003F79E9 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		F06C2EA126257525003F79E9 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		F06C2EA42625787B003F79E9 /* Budejie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Budejie.pch; sourceTree = "<group>"; };
@@ -204,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				F0162FB9261F40F6000BC29D /* classes */,
+				F030BC5C262D02F300253E07 /* Tool */,
 				F0162FA4261F3676000BC29D /* Main.storyboard */,
 				F06C2ED426260DC9003F79E9 /* AdImage */,
 				F0162FA7261F3677000BC29D /* Assets.xcassets */,
@@ -494,6 +498,24 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		F030BC5C262D02F300253E07 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				F030BC5D262D02F300253E07 /* File */,
+			);
+			name = Tool;
+			path = classes/Tool;
+			sourceTree = "<group>";
+		};
+		F030BC5D262D02F300253E07 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				F030BC5E262D031600253E07 /* DSYFileTool.h */,
+				F030BC5F262D031600253E07 /* DSYFileTool.m */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
 		F06C2EBC2625C4E5003F79E9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,6 +768,7 @@
 				F0162FE0261F43A2000BC29D /* DSYPublishViewController.m in Sources */,
 				F0162FD3261F40F6000BC29D /* AppDelegate.m in Sources */,
 				F06C2F0E26282BEC003F79E9 /* DSYSubTagCell.m in Sources */,
+				F030BC60262D031600253E07 /* DSYFileTool.m in Sources */,
 				F030BC47262AB3CE00253E07 /* DSYSquareCell.m in Sources */,
 				F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */,
 				F016300E261F547A000BC29D /* UIImage+image.m in Sources */,

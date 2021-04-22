@@ -5,23 +5,45 @@
 //  Created by opooc on 2021/4/13.
 //
 #import <SDWebImage.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 #import "DSYSettingViewController.h"
 #import "UIBarButtonItem+item.h"
-
+#import "DSYFileTool.h"
 static NSString *ID = @"cell";
 #define CachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)firstObject]
 @interface DSYSettingViewController ()
-
+@property(nonatomic,assign) NSInteger totalSize;
 @end
 
 @implementation DSYSettingViewController
-
+/*UITableViewController 的方法调用顺序
+ viewWillLayoutSubviews
+ numberOfSectionsInTableView
+ numberOfRowsInSection
+ cellForRowAtIndexPath
+ heightForRowAtIndexPath
+ viewDidLoad
+ viewWillAppear
+ viewDidAppear
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"设置";
+    [SVProgressHUD showWithStatus:@"正在计算缓存大小..."];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"jump" style:UIBarButtonItemStylePlain target:self action:@selector(jump)];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
+    //计算缓存文件的大小，先存起来；
+    //这里一定得考虑清楚线程的问题
+    [DSYFileTool getFileSize:CachePath completion:^(NSInteger totalSize) {
+        //这个totalSize是Block 的参数,是从里面拿到的数据，相当于调这个方法的一个返回值
+        self.totalSize = totalSize;
+        //这里要在主线程刷进一下
+        [self.tableView reloadData];
+        [SVProgressHUD dismiss];
+    }];
+ 
+    
 }
 
 //-(void) back{
@@ -48,7 +70,7 @@ static NSString *ID = @"cell";
 //    DSYLog(@"%ld",size);
 
 }
-
+/*已经抽成了DSYFileTool
 //自己设计拿到文件尺寸
 -(NSInteger ) getFileSize :(NSString *)driectoryPath{
 
@@ -77,7 +99,7 @@ static NSString *ID = @"cell";
     return totalSize;
 }
 
-
+*/
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -95,6 +117,7 @@ static NSString *ID = @"cell";
     cell.textLabel.text = [self sizeStr];
     return cell;
 }
+//文件夹小的时候可以用，文件夹非常大的时候，
 -(NSString *)sizeStr{
     //计算缓存数据,沙盒文件夹？3个文件夹?=>Cache的大小,尺寸
     //自己写方法拿
@@ -104,8 +127,9 @@ static NSString *ID = @"cell";
 //    NSString* cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)firstObject];
     //获取default文件路径,下面的path的拼接方法 会自动把字符串拼接成路径
 //    NSString* defaultPath = [cachePath stringByAppendingPathComponent  :@"com.hackemist.SDImageCache/default"];
-    NSInteger totalSize = [self getFileSize:CachePath];
+
     NSString* sizeStr = @"清除缓存";
+    NSInteger totalSize = self.totalSize;
     if(totalSize > 1000*1000){
         CGFloat sizeF = totalSize / 1000.0/1000.0;
         sizeStr = [NSString stringWithFormat:@"%@(%.1fMB)",sizeStr,sizeF];
@@ -120,16 +144,8 @@ static NSString *ID = @"cell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //清空缓存，回去文件管理者
-    NSFileManager *mgr = [NSFileManager defaultManager];
-    //获取caches文件夹路径,不包括子路径,Sub那个方法 是包含子路径的
-    NSArray* subPaths = [mgr contentsOfDirectoryAtPath:CachePath error:nil];
-    for (NSString* subPath in subPaths) {
-        //拼接路径
-        NSString* filePath = [CachePath stringByAppendingPathComponent:subPath];
-        //使用removeItem..删除
-        [mgr removeItemAtPath:filePath error:nil];
-    }
+    [DSYFileTool removeDirctoryPath:CachePath];//testException
+    self.totalSize = 0;
     //重新加载tableView
     [self.tableView reloadData];
 }
