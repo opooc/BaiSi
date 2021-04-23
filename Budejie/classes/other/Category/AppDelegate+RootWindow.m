@@ -7,12 +7,13 @@
 
 #import "AppDelegate+RootWindow.h"
 #import "DSYAdViewController.h"
-
+#import "DSYTabBarController.h"
 @implementation AppDelegate (RootWindow)
 
 -(void)setupRootWindow{
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    DSYAdViewController* adVc = [[DSYAdViewController alloc]init];
+//    DSYAdViewController* adVc = [[DSYAdViewController alloc]init];
+    DSYTabBarController* adVc = [[DSYTabBarController alloc]init];
     self.window.rootViewController = adVc;
     [self.window makeKeyAndVisible];
 }

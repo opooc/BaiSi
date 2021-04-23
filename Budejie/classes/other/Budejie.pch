@@ -12,17 +12,22 @@
 
 #import "UIView+Frame.h"
 #import "UIBarButtonItem+item.h"
+
+//拿到全屏的宽度和宽度
 #define DSYScreenW [UIScreen mainScreen].bounds.size.width
 #define DSYScreenH [UIScreen mainScreen].bounds.size.height
+//屏幕大小适配
 #define iphone6P 763
 #define iphone6 667
 #define iphone5 568
 #define iphone4 480
-
+//快速设置颜色
 #define DSYColor(r,g,b) [UIColor colorWithRed:(r)/256.0 green:(g)/256.0 blue:(b)/256.0 alpha:1]
-
+//设置随机色
+#define DSYRandomColor DSYColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+//打印函数名
 #define DSYFunc DSYLog(@"%s",__func__) 
-
+//调试打印
 #ifdef DEBUG
 #define DSYLog(...) NSLog(__VA_ARGS__)
 #else

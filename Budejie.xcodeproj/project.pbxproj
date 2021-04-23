@@ -60,6 +60,7 @@
 		F06C2F2D26289C37003F79E9 /* DSYLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F06C2F2C26289C37003F79E9 /* DSYLoginRegisterView.m */; };
 		F06C2F3026289C42003F79E9 /* DSYLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C2F2F26289C42003F79E9 /* DSYLoginRegisterView.xib */; };
 		F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F06CB726262215CB00749A13 /* DSYTabBar.m */; };
+		F0C3E0C02632E24E00DB0FA1 /* DSYtitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3E0BF2632E24E00DB0FA1 /* DSYtitleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +153,8 @@
 		F06CB725262215CB00749A13 /* DSYTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYTabBar.h; sourceTree = "<group>"; };
 		F06CB726262215CB00749A13 /* DSYTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYTabBar.m; sourceTree = "<group>"; };
 		F07977B1608AAD07B56FAA23 /* Pods-Budejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.debug.xcconfig"; path = "Target Support Files/Pods-Budejie/Pods-Budejie.debug.xcconfig"; sourceTree = "<group>"; };
+		F0C3E0BE2632E24E00DB0FA1 /* DSYtitleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYtitleButton.h; sourceTree = "<group>"; };
+		F0C3E0BF2632E24E00DB0FA1 /* DSYtitleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYtitleButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +306,8 @@
 		F0162FC1261F40F6000BC29D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0C3E0BE2632E24E00DB0FA1 /* DSYtitleButton.h */,
+				F0C3E0BF2632E24E00DB0FA1 /* DSYtitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -773,6 +778,7 @@
 				F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */,
 				F016300E261F547A000BC29D /* UIImage+image.m in Sources */,
 				F030BC4C262ABAA200253E07 /* DSYSquareItem.m in Sources */,
+				F0C3E0C02632E24E00DB0FA1 /* DSYtitleButton.m in Sources */,
 				F06C2EA226257525003F79E9 /* UIView+Frame.m in Sources */,
 				F030BC312628E28300253E07 /* DSYFastButton.m in Sources */,
 				F06C2F14262854CF003F79E9 /* UIImage+CircleImage.m in Sources */,
