@@ -19,7 +19,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
@@ -31,7 +30,6 @@
     }
     return self;
 }
-
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -50,7 +48,5 @@
     }
     //调整发布按钮位置
     self.publishButton.center = CGPointMake(self.dsy_width*0.5, self.dsy_height*0.5);
-
-    
 }
 @end

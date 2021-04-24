@@ -61,6 +61,12 @@
 		F06C2F3026289C42003F79E9 /* DSYLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C2F2F26289C42003F79E9 /* DSYLoginRegisterView.xib */; };
 		F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F06CB726262215CB00749A13 /* DSYTabBar.m */; };
 		F0C3E0C02632E24E00DB0FA1 /* DSYtitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3E0BF2632E24E00DB0FA1 /* DSYtitleButton.m */; };
+		F0C3E0D926332A7400DB0FA1 /* DSYAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3E0D826332A7400DB0FA1 /* DSYAllViewController.m */; };
+		F0C3E0DD26332A8A00DB0FA1 /* DSYPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3E0DC26332A8A00DB0FA1 /* DSYPictureViewController.m */; };
+		F0C3E0E126332A9400DB0FA1 /* DSYVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3E0E026332A9400DB0FA1 /* DSYVideoViewController.m */; };
+		F0C3E0E526332A9F00DB0FA1 /* DSYVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3E0E426332A9F00DB0FA1 /* DSYVoiceViewController.m */; };
+		F0C3E0E926332AAB00DB0FA1 /* DSYWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3E0E826332AAB00DB0FA1 /* DSYWorldViewController.m */; };
+		F0C3E0F02633ED3300DB0FA1 /* DSYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3E0EF2633ED3300DB0FA1 /* DSYConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +161,18 @@
 		F07977B1608AAD07B56FAA23 /* Pods-Budejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.debug.xcconfig"; path = "Target Support Files/Pods-Budejie/Pods-Budejie.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C3E0BE2632E24E00DB0FA1 /* DSYtitleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYtitleButton.h; sourceTree = "<group>"; };
 		F0C3E0BF2632E24E00DB0FA1 /* DSYtitleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYtitleButton.m; sourceTree = "<group>"; };
+		F0C3E0D726332A7400DB0FA1 /* DSYAllViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYAllViewController.h; sourceTree = "<group>"; };
+		F0C3E0D826332A7400DB0FA1 /* DSYAllViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYAllViewController.m; sourceTree = "<group>"; };
+		F0C3E0DB26332A8A00DB0FA1 /* DSYPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYPictureViewController.h; sourceTree = "<group>"; };
+		F0C3E0DC26332A8A00DB0FA1 /* DSYPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYPictureViewController.m; sourceTree = "<group>"; };
+		F0C3E0DF26332A9400DB0FA1 /* DSYVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYVideoViewController.h; sourceTree = "<group>"; };
+		F0C3E0E026332A9400DB0FA1 /* DSYVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYVideoViewController.m; sourceTree = "<group>"; };
+		F0C3E0E326332A9F00DB0FA1 /* DSYVoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYVoiceViewController.h; sourceTree = "<group>"; };
+		F0C3E0E426332A9F00DB0FA1 /* DSYVoiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYVoiceViewController.m; sourceTree = "<group>"; };
+		F0C3E0E726332AAB00DB0FA1 /* DSYWorldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYWorldViewController.h; sourceTree = "<group>"; };
+		F0C3E0E826332AAB00DB0FA1 /* DSYWorldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYWorldViewController.m; sourceTree = "<group>"; };
+		F0C3E0EE2633ED3300DB0FA1 /* DSYConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYConst.h; sourceTree = "<group>"; };
+		F0C3E0EF2633ED3300DB0FA1 /* DSYConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYConst.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +310,16 @@
 			children = (
 				F0162FD5261F438C000BC29D /* DSYEssenceViewController.h */,
 				F0162FD6261F438C000BC29D /* DSYEssenceViewController.m */,
+				F0C3E0D726332A7400DB0FA1 /* DSYAllViewController.h */,
+				F0C3E0D826332A7400DB0FA1 /* DSYAllViewController.m */,
+				F0C3E0DB26332A8A00DB0FA1 /* DSYPictureViewController.h */,
+				F0C3E0DC26332A8A00DB0FA1 /* DSYPictureViewController.m */,
+				F0C3E0DF26332A9400DB0FA1 /* DSYVideoViewController.h */,
+				F0C3E0E026332A9400DB0FA1 /* DSYVideoViewController.m */,
+				F0C3E0E326332A9F00DB0FA1 /* DSYVoiceViewController.h */,
+				F0C3E0E426332A9F00DB0FA1 /* DSYVoiceViewController.m */,
+				F0C3E0E726332AAB00DB0FA1 /* DSYWorldViewController.h */,
+				F0C3E0E826332AAB00DB0FA1 /* DSYWorldViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +348,8 @@
 				F0162FC5261F40F6000BC29D /* AppDelegate.m */,
 				F0162FC4261F40F6000BC29D /* main.m */,
 				F06C2EA42625787B003F79E9 /* Budejie.pch */,
+				F0C3E0EE2633ED3300DB0FA1 /* DSYConst.h */,
+				F0C3E0EF2633ED3300DB0FA1 /* DSYConst.m */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -758,22 +788,28 @@
 				F06C2EB226258EFA003F79E9 /* UIBarButtonItem+item.m in Sources */,
 				F030BC3F262A036700253E07 /* UITextField+Placeholder.m in Sources */,
 				F030BC2A2628D61C00253E07 /* DSYFastLoginView.m in Sources */,
+				F0C3E0F02633ED3300DB0FA1 /* DSYConst.m in Sources */,
 				F030BC56262B3D0100253E07 /* DSYWebViewController.m in Sources */,
 				F06C2F28262888BE003F79E9 /* DSYLoginRegisterViewController.m in Sources */,
 				F0162FE4261F43B0000BC29D /* DSYFriendShipViewController.m in Sources */,
 				F030BC3526295F6000253E07 /* DSYLoginField.m in Sources */,
 				F06C2ECD26260281003F79E9 /* DSYAdViewController.m in Sources */,
 				F0162FE8261F43C2000BC29D /* DSYMeViewController.m in Sources */,
+				F0C3E0E126332A9400DB0FA1 /* DSYVideoViewController.m in Sources */,
 				F06C2EF92626BAFD003F79E9 /* AppDelegate+RootWindow.m in Sources */,
 				F0162FD7261F438C000BC29D /* DSYEssenceViewController.m in Sources */,
 				F06C2F2D26289C37003F79E9 /* DSYLoginRegisterView.m in Sources */,
 				F06C2EFD2626BB20003F79E9 /* AppDelegate+SDK.m in Sources */,
 				F06C2EC32625C4F8003F79E9 /* DSYSettingViewController.m in Sources */,
 				F0163008261F4F53000BC29D /* DSYTabBarController.m in Sources */,
+				F0C3E0DD26332A8A00DB0FA1 /* DSYPictureViewController.m in Sources */,
 				F0162FE0261F43A2000BC29D /* DSYPublishViewController.m in Sources */,
+				F0C3E0E926332AAB00DB0FA1 /* DSYWorldViewController.m in Sources */,
 				F0162FD3261F40F6000BC29D /* AppDelegate.m in Sources */,
+				F0C3E0E526332A9F00DB0FA1 /* DSYVoiceViewController.m in Sources */,
 				F06C2F0E26282BEC003F79E9 /* DSYSubTagCell.m in Sources */,
 				F030BC60262D031600253E07 /* DSYFileTool.m in Sources */,
+				F0C3E0D926332A7400DB0FA1 /* DSYAllViewController.m in Sources */,
 				F030BC47262AB3CE00253E07 /* DSYSquareCell.m in Sources */,
 				F06CB727262215CB00749A13 /* DSYTabBar.m in Sources */,
 				F016300E261F547A000BC29D /* UIImage+image.m in Sources */,
