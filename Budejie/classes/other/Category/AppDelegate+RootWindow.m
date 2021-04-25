@@ -17,4 +17,7 @@
     self.window.rootViewController = adVc;
     [self.window makeKeyAndVisible];
 }
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"123123");
+}
 @end

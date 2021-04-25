@@ -15,12 +15,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.contentInset = UIEdgeInsetsMake(DSYTitlesViewH + DSYNavMaxY, 0, DSYTabBarH, 0);
+    //接收通知.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarDidRepeatClick) name:DSYTabBarItemDidRepeatClickNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleBtnDidRepeatClick) name:DSYTitleBtnDidRepeatClickNotification object:nil];
+}
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+-(void)tabBarDidRepeatClick{
+    //自己的窗口没有，说明当前情况本控制器的view不用刷新
+    if (self.view.window == nil) return;
+    //是当前控制器，但不是本view,因为当时怕有点击最上方没有刷新的问题，设置过只能有一个刷新，故此时可以复用
+    if (self.tableView.scrollsToTop == NO) return;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+-(void)titleBtnDidRepeatClick{
+    //因为标题和tab的操作一样，直接调就可以
+    [self tabBarDidRepeatClick];
+
 }
 
 #pragma mark - Table view data source

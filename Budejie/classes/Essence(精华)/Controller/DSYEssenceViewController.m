@@ -13,13 +13,17 @@
 #import "DSYVoiceViewController.h"
 #import "DSYWorldViewController.h"
 
-@interface DSYEssenceViewController ()
+
+@interface DSYEssenceViewController () <UIScrollViewDelegate>
+
+@property(nonatomic,weak)UIScrollView* scrollView;
 @property(nonatomic,weak)UIView* titleview;
 //文字下划线
 @property(nonatomic,weak)UIView *titleUnderline;
 @property(nonatomic,weak)UIButton* priClickBtn;
 @end
-
+static CGFloat scrollViewW ;
+static CGFloat scrollViewH ;
 @implementation DSYEssenceViewController
 #pragma mark - 初始化
 - (void)viewDidLoad {
@@ -67,9 +71,15 @@
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator   = NO;
     scrollView.pagingEnabled = YES;//开启分页功能
+    scrollView.scrollsToTop = NO;
     scrollView.backgroundColor = [UIColor grayColor];
     scrollView.frame           = self.view.bounds;
+    //设置代理用于监听
+    scrollView.delegate = self;
     [self.view addSubview:scrollView];
+    scrollViewW = scrollView.dsy_width;
+    scrollViewH = scrollView.dsy_height;
+    self.scrollView = scrollView;
     //tableView 的contentSize是无法控制的
     //直接使用5个tableView不太合理
 //    for (NSUInteger i = 0 ; i < 5 ; i++) {
@@ -85,26 +95,9 @@
     if (@available(*, iOS 10.3)){
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-    CGFloat scrollViewW = scrollView.dsy_width;
-    CGFloat scrollViewH = scrollView.dsy_height;
-    for (int i = 0; i < self.childViewControllers.count; i++) {
-        //取出i位置子控器的view
-        UITableView *childVcView = (UITableView*)self.childViewControllers[i].view;
-        if (@available(iOS 11.0, *)){
-            //tableView 设置全屏穿透效果,开启
-            childVcView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        }
-        childVcView.backgroundColor = DSYRandomColor;
-        //设置一下大小和位置
-        childVcView.frame = CGRectMake(i *scrollViewW,0, scrollViewW, scrollViewH);
-        //设置顶和底的内边距，这样cell可以一直停留在中间
-        
-        [scrollView addSubview:childVcView];
-    }
-    
+    [self addChildVcViewIntoScrollView];
     //scrollView的contentSize当小于等于内容的时候，就不能滑动了，当大一点点的时候就会有弹簧功能
-    scrollView.contentSize = CGSizeMake(5*scrollView.dsy_width, 0);
-    
+    scrollView.contentSize = CGSizeMake(5*scrollViewW, 0);
 //    如果向scrollView添加子控件,会自动偏移64+30，往下移动是因为scrollView碰到导航栏自带内边距
 //    UISwitch* s = [[UISwitch alloc]init];
 //    s.dsy_x = 0;s.dsy_y = 0;
@@ -160,10 +153,16 @@
 }
 #pragma mark -监听
 -(void)titleButtonClick:(UIButton *)titleBtn{
+    if (self.priClickBtn == titleBtn) {
+        [[NSNotificationCenter defaultCenter]postNotificationName:DSYTitleBtnDidRepeatClickNotification object:nil];
+    }
     //设置按钮的状态切换
     self.priClickBtn.selected = NO;
     titleBtn.selected = YES;
     self.priClickBtn = titleBtn;
+    //也可以 NSUInteger index = titleBtn.tag;使用Tag的时候注意 不能让tag的值为0，如果为0 ，会先检测到默认为0的自己
+    NSUInteger index = [self.titleview.subviews indexOfObject:titleBtn];
+
     //设置标题按钮的状态
     [UIView animateWithDuration:0.25 animations:^{
         //取按钮当前文字下的颜色；也可以自己使用状态取[titleBtn currentTitle];
@@ -175,9 +174,52 @@
 //        self.titleUnderline.dsy_width = [[titleBtn currentTitle] sizeWithAttributes: fontDic].width;
         self.titleUnderline.dsy_width = titleBtn.titleLabel.dsy_width+10;
         self.titleUnderline.dsy_centerX = titleBtn.dsy_centerX;
+
+        //滚动scrollView到标题对应的tableView
+        CGPoint point = self.scrollView.contentOffset;
+        point.x = scrollViewW * index;
+        self.scrollView.contentOffset = point;
+    }completion:^(BOOL finished) {
+        [self addChildVcViewIntoScrollView];
     }];
+    //设置index位置对应的tableView.scrollsTotop
+    for(NSUInteger i = 0 ; i<self.childViewControllers.count;i++){
+        UIViewController* childVc = self.childViewControllers[i];
+        if(![childVc isViewLoaded] || ![childVc.view isKindOfClass:[UIScrollView class]]) continue;
+        //防止iOS14或者更之前的机型，出现因为多scrollView引起的点击顶部 无法回到最上面;
+        UITableView *scrollView = (UITableView*)childVc.view;
+        if(i == index){
+            scrollView.scrollsToTop = YES;
+        }else{
+            scrollView.scrollsToTop = NO;
+        }
+    }
+}
+-(void) addChildVcViewIntoScrollView{
+    NSUInteger index = self.scrollView.contentOffset.x / scrollViewW;
+    UIViewController* childVc =self.childViewControllers[index];
+    if([childVc isViewLoaded])return;//如果加过了，就不用执行后面的逻辑了
+    UITableView *childVcView = (UITableView*)childVc.view;
+    if (@available(iOS 11.0, *)){
+        //tableView 设置全屏穿透效果,开启
+        childVcView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    childVcView.backgroundColor = DSYRandomColor;
+    //设置一下大小和位置
+    childVcView.frame = self.scrollView.bounds;
+    [self.scrollView addSubview:childVcView];
 }
 
+//scrollView结束拖拽，开始减速的时候调用;
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    NSLog(@"1");
+//}
+//结束拖拽，并减速结束的时候调用scrollViewDidEndDecelerating
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    //这个值是在结束的时候拿的
+    NSUInteger index = scrollView.contentOffset.x / scrollViewW;
+    [self titleButtonClick:self.titleview.subviews[index]];
+}
 -(void) game{
     DSYFunc;
 }

@@ -8,4 +8,5 @@
 CGFloat const DSYTabBarH = 49;
 CGFloat const DSYNavMaxY = 64;
 CGFloat const DSYTitlesViewH = 35;
-
+NSString * const  DSYTabBarItemDidRepeatClickNotification = @"DSYTabBarItemDidRepeatClickNotification";
+NSString * const  DSYTitleBtnDidRepeatClickNotification = @"DSYTabBarItemDidRepeatClickNotification";

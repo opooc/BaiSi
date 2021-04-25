@@ -99,7 +99,6 @@
         //使用xib创建一定要记得在xib中绑定cell
         cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([DSYSubTagCell class]) owner:nil options:nil][0];
     }
-    DSYLog(@"%p",cell);
     cell.item = self.subTags[indexPath.row];
     return cell;
 }
